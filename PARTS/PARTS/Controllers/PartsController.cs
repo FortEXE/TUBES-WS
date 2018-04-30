@@ -13,42 +13,42 @@ namespace PARTS.Controllers
     {
         // GET: api/Parts/GetAllBarang
         [HttpGet("GetAllBarang")]
-        public IEnumerable<Barang> GetBarang()
+        public IActionResult GetBarang()
         {
             RepositoryBarang RP = new RepositoryBarang();
             List<Barang> ListParts = RP.getAll();
 
-            return ListParts;
+            return Ok(ListParts);
         }
 
         // GET: api/Parts/GetAllSpesifikasi
         [HttpGet("GetAllSpesifikasi")]
-        public IEnumerable<Spesifikasi> GetSpesifikasi()
+        public IActionResult GetSpesifikasi()
         {
             RepositorySpesifikasi RP = new RepositorySpesifikasi();
             List<Spesifikasi> ListParts = RP.getAll();
 
-            return ListParts;
+            return Ok(ListParts);
         }
 
         // GET: api/Parts/GetAllKategori
         [HttpGet("GetAllKategori")]
-        public IEnumerable<Kategori> GetKategori()
+        public IActionResult GetKategori()
         {
             RepositoryKategori RP = new RepositoryKategori();
             List<Kategori> ListParts = RP.getAll();
 
-            return ListParts;
+            return Ok(ListParts);
         }
 
         // GET: api/Parts/GetAllDetailBarang
         [HttpGet("GetAllDetailBarang")]
-        public IEnumerable<DetailBarang> GetDetailBarang()
+        public IActionResult GetDetailBarang()
         {
             RepositoryDetailBarang RP = new RepositoryDetailBarang();
             List<DetailBarang> ListParts = RP.getAll();
 
-            return ListParts;
+            return Ok(ListParts);
         }
 
         // GET: api/Parts/5
@@ -61,9 +61,8 @@ namespace PARTS.Controllers
         
         // POST: api/Parts
         [HttpPost("Insert")]
-        public string Post([FromBody]Parts value)
+        public string Post([FromBody]Barang value)
         {
-            RepositoryParts RP = new RepositoryParts();
 
             try
             {
@@ -78,9 +77,8 @@ namespace PARTS.Controllers
         
         // PUT: api/Parts/5
         [HttpPut("Update/{id}")]
-        public string Put(int id, [FromBody]Parts value)
+        public string Put(int id, [FromBody]Barang value)
         {
-            RepositoryParts RP = new RepositoryParts();
 
             try
             {
@@ -97,7 +95,6 @@ namespace PARTS.Controllers
         [HttpDelete("Delete/{id}")]
         public string Delete(int id)
         {
-            RepositoryParts RP = new RepositoryParts();
 
             try
             {
