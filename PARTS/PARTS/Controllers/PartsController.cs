@@ -11,12 +11,42 @@ namespace PARTS.Controllers
     [Route("api/Parts")]
     public class PartsController : Controller
     {
-        // GET: api/Parts/GetAll
-        [HttpGet("GetAll")]
-        public IEnumerable<Parts> Get()
+        // GET: api/Parts/GetAllBarang
+        [HttpGet("GetAllBarang")]
+        public IEnumerable<Barang> GetBarang()
         {
-            RepositoryParts RP = new RepositoryParts();
-            List<Parts> ListParts = RP.getAll();
+            RepositoryBarang RP = new RepositoryBarang();
+            List<Barang> ListParts = RP.getAll();
+
+            return ListParts;
+        }
+
+        // GET: api/Parts/GetAllSpesifikasi
+        [HttpGet("GetAllSpesifikasi")]
+        public IEnumerable<Spesifikasi> GetSpesifikasi()
+        {
+            RepositorySpesifikasi RP = new RepositorySpesifikasi();
+            List<Spesifikasi> ListParts = RP.getAll();
+
+            return ListParts;
+        }
+
+        // GET: api/Parts/GetAllKategori
+        [HttpGet("GetAllKategori")]
+        public IEnumerable<Kategori> GetKategori()
+        {
+            RepositoryKategori RP = new RepositoryKategori();
+            List<Kategori> ListParts = RP.getAll();
+
+            return ListParts;
+        }
+
+        // GET: api/Parts/GetAllDetailBarang
+        [HttpGet("GetAllDetailBarang")]
+        public IEnumerable<DetailBarang> GetDetailBarang()
+        {
+            RepositoryDetailBarang RP = new RepositoryDetailBarang();
+            List<DetailBarang> ListParts = RP.getAll();
 
             return ListParts;
         }
