@@ -2,15 +2,23 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PARTS.Repository;
 
 namespace PARTS.Controllers
 {
+    [Authorize]
     [Produces("application/json")]
     [Route("api/Parts")]
     public class PartsController : Controller
     {
+
+        ////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////    GET ALL    ////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////
+
         // GET: api/Parts/GetAllBarang
         [HttpGet("GetAllBarang")]
         public IActionResult GetBarang()
@@ -53,15 +61,17 @@ namespace PARTS.Controllers
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////
-        ////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////  GET BY ID  /////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////
 
         // GET: api/Parts/5
-        [HttpGet("GetById/{id}", Name = "Get")]
-        public int Get(int id)
+        [HttpGet("GetPenggunaById/{id}", Name = "Get")]
+        public IActionResult Get(String id)
         {
+            RepositoryPengguna RP = new RepositoryPengguna();
 
-            return 0;
+            var hasil = RP.getByID(id);
+            return Ok(hasil);
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////
