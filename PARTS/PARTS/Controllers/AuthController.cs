@@ -50,9 +50,8 @@ namespace PARTS.Controllers
                     return Ok(tokenString);
 
                 }
-                return BadRequest(user.GetMd5Hash(md5hash, usernameAndPass[1]));
             }
-            return BadRequest("Shit");
+            return BadRequest("Wrong Credentials");
         }
     }
 }
