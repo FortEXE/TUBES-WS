@@ -13438,23 +13438,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\labprak\\.nuget\\packages\\": {},
+    "C:\\Users\\user\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\labprak\\source\\repos\\PARTS\\PARTS\\PARTS.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Documents\\tubes\\PARTS\\PARTS\\PARTS.csproj",
       "projectName": "PARTS",
-      "projectPath": "C:\\Users\\labprak\\source\\repos\\PARTS\\PARTS\\PARTS.csproj",
-      "packagesPath": "C:\\Users\\labprak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\labprak\\source\\repos\\PARTS\\PARTS\\obj\\",
+      "projectPath": "C:\\Users\\user\\Documents\\tubes\\PARTS\\PARTS\\PARTS.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user\\Documents\\tubes\\PARTS\\PARTS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\labprak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

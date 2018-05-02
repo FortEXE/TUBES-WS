@@ -33,7 +33,11 @@ namespace PARTS
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            else
+            {
+                app.UseExceptionHandler();
+            }
+            app.UseStatusCodePages();
             app.UseMvc();
         }
     }
