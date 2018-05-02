@@ -70,18 +70,18 @@ namespace PARTS.Controllers
         
         // POST: api/Parts
         [HttpPost("InsertBarang")]
-        public string Post([FromBody]Barang value)
+        public IActionResult Post([FromBody]Barang value)
         {
             RepositoryBarang RP = new RepositoryBarang();
 
             try
             {
                 RP.insertData(value);
-                return "jhjhj";
+                return Ok();
             }
             catch (Exception e)
             {
-                return e.Message;
+                return NotFound();
             }
         }
 
