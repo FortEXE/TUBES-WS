@@ -8,13 +8,13 @@
  Source Schema         : db_gudangbarang
 
  Target Server Type    : MySQL
- Target Server Version : 50799
+ Target Server Version : 100130
  File Encoding         : 65001
 
- Date: 28/04/2018 07:31:53
+ Date: 02/05/2018 14:14:55
 */
 
-SET NAMES utf8;
+SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
@@ -23,22 +23,24 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `barang`;
 CREATE TABLE `barang`  (
   `ID_BARANG` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `XID_PENGGUNA` int(11) NOT NULL,
   `XID_KATEGORI` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   `NAMA_BARANG` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   `MERK_BARANG` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `TYPE_BARANG` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   `HARGA_BARANG` int(11) NOT NULL,
   `STOK_BARANG` int(11) NOT NULL,
   PRIMARY KEY (`ID_BARANG`) USING BTREE,
-  INDEX `FK_ID_KATEGORI`(`XID_KATEGORI`, `TYPE_BARANG`) USING BTREE,
-  CONSTRAINT `FK_ID_KATEGORI` FOREIGN KEY (`XID_KATEGORI`, `TYPE_BARANG`) REFERENCES `kategori` (`ID_KATEGORI`, `NAMA_KATEGORI`) ON DELETE RESTRICT ON UPDATE RESTRICT
+  INDEX `FK_ID_KATEGORI`(`XID_KATEGORI`) USING BTREE,
+  INDEX `FK_ID_PENGGUNA`(`XID_PENGGUNA`) USING BTREE,
+  CONSTRAINT `FK_ID_KATEGORI` FOREIGN KEY (`XID_KATEGORI`) REFERENCES `kategori` (`ID_KATEGORI`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  CONSTRAINT `FK_ID_PENGGUNA` FOREIGN KEY (`XID_PENGGUNA`) REFERENCES `pengguna` (`ID_PENGGUNA`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB CHARACTER SET = latin1 COLLATE = latin1_swedish_ci;
 
 -- ----------------------------
 -- Records of barang
 -- ----------------------------
 BEGIN;
-INSERT INTO `barang` VALUES ('BRG0001', 'K00001', 'INTEL CORE i7', 'Intel', 'CPU', 6000000, 5), ('BRG0002', 'K00002', 'NVIDIA GTX 1080', 'NVIDIA', 'GPU', 8000000, 10), ('BRG0003', 'K00003', 'Asus 8X External Slim DVD+/-RW Drive Optical Drives - SDRW-08D2S', 'ASUS', 'OPTICAL DRIVE', 300000, 3), ('BRG0004', 'K00004', 'Corsair Vengeance LPX', 'CORSAIR', 'RAM', 1000000, 10), ('BRG0005', 'K00005', 'ASUS ROG STRIX B250H', 'ASUS', 'MOTHERBOARD', 2000000, 20), ('BRG0006', 'K00006', 'COOLER MASTER MWE 450', 'COOLER MASTER', 'POWER SUPPLY', 400000, 13), ('BRG0007', 'K00007', 'SEAGATE FIRECUDA 2.5', 'SEAGATE', 'HDD', 1000000, 8);
+INSERT INTO `barang` VALUES ('BRG0001', 1, 'K00001', 'INTEL CORE i7', 'Intel', 6000000, 5), ('BRG0002', 1, 'K00002', 'NVIDIA GTX 1080', 'NVIDIA', 8000000, 10), ('BRG0003', 1, 'K00003', 'Asus 8X External Slim DVD+/-RW Drive Optical Drives - SDRW-08D2S', 'ASUS', 300000, 3), ('BRG0004', 1, 'K00004', 'Corsair Vengeance LPX', 'CORSAIR', 1000000, 10), ('BRG0005', 1, 'K00005', 'ASUS ROG STRIX B250H', 'ASUS', 2000000, 20), ('BRG0006', 1, 'K00006', 'COOLER MASTER MWE 450', 'COOLER MASTER', 400000, 13), ('BRG0007', 1, 'K00007', 'SEAGATE FIRECUDA 2.5', 'SEAGATE', 1000000, 8);
 COMMIT;
 
 -- ----------------------------
@@ -80,6 +82,29 @@ CREATE TABLE `kategori`  (
 -- ----------------------------
 BEGIN;
 INSERT INTO `kategori` VALUES ('K00001', 'CPU'), ('K00002', 'GPU'), ('K00007', 'HDD'), ('K00005', 'MOTHERBOARD'), ('K00003', 'OPTICAL DRIVE'), ('K00006', 'POWER SUPPLY'), ('K00004', 'RAM');
+COMMIT;
+
+-- ----------------------------
+-- Table structure for pengguna
+-- ----------------------------
+DROP TABLE IF EXISTS `pengguna`;
+CREATE TABLE `pengguna`  (
+  `ID_PENGGUNA` int(11) NOT NULL AUTO_INCREMENT,
+  `NAMA` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `USERNAME` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `EMAIL` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `USER_TYPE` enum('user','admin') CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT 'user',
+  `PASSWORD` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  PRIMARY KEY (`ID_PENGGUNA`) USING BTREE,
+  INDEX `username`(`USERNAME`) USING BTREE,
+  INDEX `username_2`(`USERNAME`, `ID_PENGGUNA`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci;
+
+-- ----------------------------
+-- Records of pengguna
+-- ----------------------------
+BEGIN;
+INSERT INTO `pengguna` VALUES (1, 'Adnan Khairi', 'adnankhairi', 'adnankhairi@student.upi.edu', 'admin', 'C521CC3DA32F9176D0B2483D4D8CA433'), (2, 'adnan', 'adnan', 'squadron296@gmail.com', 'user', 'f3465a353436bbab3617815f64083c84');
 COMMIT;
 
 -- ----------------------------
