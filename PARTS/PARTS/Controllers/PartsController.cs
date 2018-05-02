@@ -18,6 +18,7 @@ namespace PARTS.Controllers
             RepositoryBarang RP = new RepositoryBarang();
             List<Barang> ListParts = RP.getAll();
 
+            
             return Ok(ListParts);
         }
 
