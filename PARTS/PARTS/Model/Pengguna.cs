@@ -37,7 +37,7 @@ namespace PARTS.Model
             // and format each one as a hexadecimal string.
             for (int i = 0; i < data.Length; i++)
             {
-                sBuilder.Append(data[i].ToString("X2"));
+                sBuilder.Append(data[i].ToString("x2"));
             }
 
             // Return the hexadecimal string.
