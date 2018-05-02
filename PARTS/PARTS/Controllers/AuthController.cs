@@ -37,7 +37,7 @@ namespace PARTS.Controllers
                 {
                     var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("SecretKey!@#12364488993_====++++"));
                     var signInCred = new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature);
-                    var ClaimsData = new[] { new Claim(ClaimTypes.Name, "username") };
+                    var ClaimsData = new[] { new Claim(ClaimTypes.Name, user.Username) };
                     var token = new JwtSecurityToken(
                         issuer: "computercorner.com",
                         audience: "computercorner.com",
