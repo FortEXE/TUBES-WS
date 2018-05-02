@@ -78,8 +78,8 @@ namespace PARTS.Controllers
             int _stok_barang = brg.Stok_barang;
 
             string query =
-                "UPDATE barang SET XID_KATEGORI = '" + _xid_barang + "', NAMA_BARANG = '" + _nama_barang + "', MERK_BARANG = '" + _merk_barang + "', TYPE_BARANG = '" + _type_barang
-                + "', HARGA_BARANG = " + _harga_barang + ", STOK_BARANG = " + _stok_barang " WHERE ID_BARANG = '" + _id_barang + "';";
+                "UPDATE barang SET XID_KATEGORI = '" + _id_barang + "', NAMA_BARANG = '" + _nama_barang + "', MERK_BARANG = '" + _merk_barang + "', TYPE_BARANG = '" + _type_barang
+                + "', HARGA_BARANG = " + _harga_barang + ", STOK_BARANG = " + _stok_barang + " WHERE ID_BARANG = '" + _id_barang + "';";
 
             OpenConnection();
             var hasil = myConn.Execute(query);
