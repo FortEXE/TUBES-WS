@@ -22,6 +22,10 @@ namespace PARTS.Controllers
             if (headers.ToString().StartsWith("Basic"))
             {
                 var credValue = headers.ToString().Substring("Basic".Length).Trim();
+                var usernameAndPassEnc = Encoding.UTF8.GetString(Convert.FromBase64String(credValue));
+                var usernameAndPass = usernameAndPassEnc.Split(":");
+
+                //Check in DB if username and Password exist
 
                 var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("SecretKey!@#12364488993_====++++"));
                 var signInCred = new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature);
