@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 02, 2018 at 11:03 AM
+-- Generation Time: May 02, 2018 at 07:06 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -35,40 +35,41 @@ CREATE TABLE `barang` (
   `MERK_BARANG` text NOT NULL,
   `HARGA_BARANG` int(11) NOT NULL,
   `STOK_BARANG` int(11) NOT NULL,
-  `XID_PENGGUNA` int(11) NOT NULL
+  `XID_PENGGUNA` int(11) NOT NULL,
+  `IMAGE` varchar(225) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `barang`
 --
 
-INSERT INTO `barang` (`ID_BARANG`, `XID_KATEGORI`, `NAMA_BARANG`, `MERK_BARANG`, `HARGA_BARANG`, `STOK_BARANG`, `XID_PENGGUNA`) VALUES
-('BRG0001', 'K00001', 'INTEL CORE i7', 'INTEL', 6000000, 5, 1),
-('BRG0002', 'K00002', 'NVIDIA GTX 1080', 'NVIDIA', 8000000, 10, 1),
-('BRG0003', 'K00003', 'Asus 8X External Slim', 'ASUS', 300000, 3, 1),
-('BRG0004', 'K00004', 'Corsair Vengeance LPX', 'CORSAIR', 1000000, 10, 1),
-('BRG0005', 'K00005', 'ASUS ROG STRIX B250H', 'ASUS', 2000000, 20, 1),
-('BRG0006', 'K00006', 'COOLER MASTER MWE 450', 'COOLER MASTER', 400000, 13, 1),
-('BRG0007', 'K00007', 'SEAGATE FIRECUDA 2.5', 'SEAGATE', 1000000, 8, 1),
-('BRG0008', 'K00001', 'AMD Ryzen 7 2700X', 'AMD', 5000000, 5, 1),
-('BRG0009', 'K00001', 'AMD Ryzen Threadripper 1950X', 'AMD', 20000000, 3, 1),
-('BRG0010', 'K00001', 'INTEL Core i9-7960X', 'INTEL', 25000000, 4, 1),
-('BRG0011', 'K00002', 'Radeon RX Vega 64', 'AMD', 25000000, 2, 1),
-('BRG0012', 'K00002', 'Radeon RX Vega 64 Liquid Cooled', 'AMD', 17000000, 3, 1),
-('BRG0013', 'K00002', 'NVIDIA Quadro GV100', 'NVIDIA', 150000000, 4, 1),
-('BRG0014', 'K00003', 'Lenovo Thinkpad USB Slim', 'LENOVO', 25000000, 2, 1),
-('BRG0015', 'K00004', 'VGEN 4GB DDR4 PC', 'VGEN', 700000, 20, 1),
-('BRG0016', 'K00004', 'Kingstone 4GB DDR3 PC', 'KINGSTONE', 400000, 10, 1),
-('BRG0017', 'K00004', 'OCPC 8GB DDR3 PC', 'OCPC', 1400000, 15, 1),
-('BRG0018', 'K00005', 'MSI Gaming M3', 'MSI', 890000, 5, 1),
-('BRG0019', 'K00005', 'ASUS Prime Z3', 'ASUS', 1500000, 5, 1),
-('BRG0020', 'K00005', 'GYGABITE Aorus X', 'GYGABITE', 550000, 5, 1),
-('BRG0021', 'K00006', 'CORSAIR RM', 'CORSAIR', 550000, 5, 1),
-('BRG0022', 'K00006', 'EVGA Super', 'EVGA', 550000, 5, 1),
-('BRG0023', 'K00006', 'SEASONIC ', 'SEASONIC', 550000, 5, 1),
-('BRG0024', 'K00007', 'Hardisk WD Int 3.5\" 4TB', 'WD', 2400000, 7, 1),
-('BRG0025', 'K00007', 'Seagate Barracuda Int 2.5\" 1TB', 'SEAGATE', 700000, 4, 1),
-('BRG0026', 'K00007', 'Seagate Firecuda Int 2.5\" 2TB', 'SEAGATE', 1500000, 3, 1);
+INSERT INTO `barang` (`ID_BARANG`, `XID_KATEGORI`, `NAMA_BARANG`, `MERK_BARANG`, `HARGA_BARANG`, `STOK_BARANG`, `XID_PENGGUNA`, `IMAGE`) VALUES
+('BRG0001', 'K00001', 'INTEL CORE i7', 'INTEL', 6000000, 5, 1, 'http://www.venuscomputers.pk/wp-content/uploads/2014/09/Core%E2%84%A2-i7-4790K-300x300.jpg'),
+('BRG0002', 'K00002', 'NVIDIA GTX 1080', 'NVIDIA', 8000000, 10, 1, 'https://www.beritateknologi.com/wp-content/uploads/2017/04/38394_large_geforcegtx1080ti-01.png'),
+('BRG0003', 'K00003', 'Asus 8X External Slim', 'ASUS', 300000, 3, 1, 'https://brain-images-ssl.cdn.dixons.com/2/0/21856102/u_21856102.jpg'),
+('BRG0004', 'K00004', 'Corsair Vengeance LPX', 'CORSAIR', 1000000, 10, 1, 'https://images-na.ssl-images-amazon.com/images/I/51D9ofTCYcL._SL500_AC_SS350_.jpg'),
+('BRG0005', 'K00005', 'ASUS ROG STRIX B250H', 'ASUS', 2000000, 20, 1, 'https://www.asus.com/media/global/products/UuXdqeEwqKCze4pL/P_setting_000_1_90_end_500.png'),
+('BRG0006', 'K00006', 'COOLER MASTER MWE 450', 'COOLER MASTER', 400000, 13, 1, 'https://blossomzones.com/wp-content/uploads/2018/01/MWE-450.jpg'),
+('BRG0007', 'K00007', 'SEAGATE FIRECUDA 2.5', 'SEAGATE', 1000000, 8, 1, 'https://images-na.ssl-images-amazon.com/images/I/915bJk4f6DL._SL1500_.jpg'),
+('BRG0008', 'K00001', 'AMD Ryzen 7 2700X', 'AMD', 5000000, 5, 1, 'https://cdn.wccftech.com/wp-content/uploads/2018/01/AMD-Ryzen-2.jpg'),
+('BRG0009', 'K00001', 'AMD Ryzen Threadripper 1950X', 'AMD', 20000000, 3, 1, 'http://www.legitreviews.com/wp-content/uploads/2017/08/threadripper-install-board-9.jpg'),
+('BRG0010', 'K00001', 'INTEL Core i9-7960X', 'INTEL', 25000000, 4, 1, 'https://www.bhphotovideo.com/images/images2500x2500/intel_bx80673i97960x_core_i9_7960x_x_series_2_8_1361951.jpg'),
+('BRG0011', 'K00002', 'Radeon RX Vega 64', 'AMD', 25000000, 2, 1, 'https://s2.bukalapak.com/img/2783212381/w-1000/Sapphire_Radeon_RX_VEGA_64_8GB_HBM2.jpg'),
+('BRG0012', 'K00002', 'Radeon RX Vega 64 Liquid Cooled', 'AMD', 17000000, 3, 1, 'https://static.gigabyte.com/Product/3/6387/2017072816314295_big.png'),
+('BRG0013', 'K00002', 'NVIDIA Quadro GV100', 'NVIDIA', 150000000, 4, 1, 'http://analisadaily.com/assets/image/news/small/2018/03/nvidia-quadro-gv100-didukung-ray-tracing-529128-1.jpg'),
+('BRG0014', 'K00003', 'Lenovo Thinkpad USB Slim', 'LENOVO', 25000000, 2, 1, 'https://ecs7.tokopedia.net/img/cache/700/product-1/2017/3/31/138143071/138143071_a307811d-fb79-431e-951f-f46e0d23c33f_454_538.jpg'),
+('BRG0015', 'K00004', 'VGEN 4GB DDR4 PC', 'VGEN', 700000, 20, 1, 'https://ecs7.tokopedia.net/img/cache/700/product-1/2017/12/6/4505638/4505638_ca42c05e-0def-47b4-b6cc-afb9c6808f0c_700_393.jpg'),
+('BRG0016', 'K00004', 'Kingstone 4GB DDR3 PC', 'KINGSTONE', 400000, 10, 1, 'https://s2.bukalapak.com/img/2306451331/w-1000/RAM_DDR_3_4GB_KINGSTON_PC12800___PC310600_BARU.jpg'),
+('BRG0017', 'K00004', 'OCPC 8GB DDR3 PC', 'OCPC', 1400000, 15, 1, 'https://s2.bukalapak.com/img/762722212/w-1000/Ram%20OCPC%20Xtreme%20DDR3%208GB%201600Mhz%20PC12800%20like%20new.JPG'),
+('BRG0018', 'K00005', 'MSI Gaming M3', 'MSI', 890000, 5, 1, 'https://dstatic.computeruniverse.net/images/1000/90679650E5967F98222E4EA690E0A99E.jpg'),
+('BRG0019', 'K00005', 'ASUS Prime Z3', 'ASUS', 1500000, 5, 1, 'https://productimages.hepsiburada.net/s/3/500/9603739844658.jpg'),
+('BRG0020', 'K00005', 'GYGABITE Aorus X', 'GYGABITE', 550000, 5, 1, 'https://assets.hardwarezone.com/img/2017/08/gigabyte-x299-aorus-gaming.jpg'),
+('BRG0021', 'K00006', 'CORSAIR RM', 'CORSAIR', 550000, 5, 1, 'http://cwsmgmt.corsair.com/media/catalog/product/r/m/rm1000_sideview_a.png'),
+('BRG0022', 'K00006', 'EVGA Super', 'EVGA', 550000, 5, 1, 'http://cdn.pcpartpicker.com/static/forever/images/product/a4a40fbe050996aebbc73368a3d3449d.256p.jpg'),
+('BRG0023', 'K00006', 'SEASONIC ', 'SEASONIC', 550000, 5, 1, 'https://images10.newegg.com/BizIntell/item/17/151/17-151-122/2.jpg'),
+('BRG0024', 'K00007', 'Hardisk WD Int 3.5\" 4TB', 'WD', 2400000, 7, 1, 'https://images-na.ssl-images-amazon.com/images/I/51fBk1rrkPL._SX425_.jpg'),
+('BRG0025', 'K00007', 'Seagate Barracuda Int 2.5\" 1TB', 'SEAGATE', 700000, 4, 1, 'https://images-na.ssl-images-amazon.com/images/I/91kc-ob1WbL._SX425_.jpg'),
+('BRG0026', 'K00007', 'Seagate Firecuda Int 2.5\" 2TB', 'SEAGATE', 1500000, 3, 1, 'https://images-na.ssl-images-amazon.com/images/I/91kuba4ECVL._SY450_.jpg');
 
 -- --------------------------------------------------------
 
@@ -316,7 +317,8 @@ CREATE TABLE `pengguna` (
 
 INSERT INTO `pengguna` (`ID_PENGGUNA`, `NAMA`, `USERNAME`, `EMAIL`, `USER_TYPE`, `PASSWORD`) VALUES
 (1, 'Adnan Khairi', 'adnankhairi', 'adnankhairi@student.upi.edu', 'admin', 'C521CC3DA32F9176D0B2483D4D8CA433'),
-(2, 'adnan', 'adnan', 'squadron296@gmail.com', 'user', 'f3465a353436bbab3617815f64083c84');
+(2, 'adnan', 'adnan', 'squadron296@gmail.com', 'user', 'f3465a353436bbab3617815f64083c84'),
+(3, 'Alley', 'ali', 'ali@gmail.com', 'user', 'ali');
 
 -- --------------------------------------------------------
 
@@ -341,7 +343,26 @@ INSERT INTO `spesifikasi` (`ID_SPESIFIKASI`, `XID_BARANG`, `RINCIAN_SPESIFIKASI`
 (4, 'BRG0004', 'GENERAL\r\nMemory Specification Compliance PC4-24000\r\nMemory Speed 3000 MHz\r\nData Integrity Check non-ECC\r\nUpgrade Type generic\r\nManufacturerCorsair Microsystems Inc.\r\nMEMORY\r\nLatency Timings CL15 ( 15-17-17-35 )\r\nData Integrity Check Non-ECC\r\nRAM Performance SPD - 2133 MHz - 1.2 V - CL15 - 15-15-15-36\r\nTested - 3000 MHz - 1.35 V - CL15 - 15-17-17-35\r\nRAM\r\nType DRAM\r\nForm Factor DIMM 288-pin\r\nTechnology DDR4 SDRAM\r\nStorage Capacity 16 GB\r\nRegistered or Buffered unbuffered\r\nSupply Voltage 1.35 V\r\nCAS Latency CL15\r\nLatency Timings 15-17-17-35\r\nRAM Features 8 Layers PCB heatspreader, Intel Extreme Memory Profiles (XMP 2.0), Vengeance LPX low profile heatspreader, anodized aluminum heatspreader, dual channel\r\nHEADER\r\nBrand Corsair\r\nProduct Line Corsair Vengeance\r\nModel LPX\r\nPackaged Quantity 1\r\nCompatibility PC\r\nRAM PERFORMANCE\r\nProfile SPD, Tested\r\nSpeed 2133 MHz, 3000 MHz\r\nVoltage 1.2 V, 1.35 V\r\nCAS Latency CL15, CL15\r\nLatency Timing 15-15-15-36, 15-17-17-35\r\nMEMORY MODULE\r\nModules in Kit 2\r\nCapacity of Module in Kit 8 GB\r\nSERVICE & SUPPORT\r\nType limited lifetime warranty\r\nGENERAL\r\nManufacturerCorsair Microsystems Inc.'),
 (5, 'BRG0005', '6 x USB 2.0\r\n(2 mid-board, 4 rear)\r\nDVI\r\nHDMI\r\n6 x USB 3.0\r\n(4 mid-board, 2 rear)\r\nIntel? I219-V Gigabit LAN \r\nGameFirst Technology\r\nLANGuard\r\nSupremeFX 8-Channel Audio\r\nOptical S/PDIF out\r\n1x PCIe 3.0 x 16 (support x16) \r\n1x PCIe 3.0 x 16 (support x4)\r\n4 x PCIe 3.0 x 1\r\nSupremeFX S1220A Codec \r\n? Impedance sense\r\n? High quality output and input\r\n? SupremeFX shielding\r\n? Dual headphone amplifiers\r\nDDR4 2400/2133MHz \r\n4 x DIMM, dual-channel \r\nSupport XMP\r\nIntel? Socket 1151\r\nM.2 Socket 3 Type M (2242-2280)\r\nSupports SATA and PCIe 3.0 x 4 modes\r\n6 x SATA 6Gb/s\r\nM.2 Socket 3 Type M (2242-22110) \r\nSupports PCIe 3.0 x 4 mode \r\nCLRTC Header'),
 (6, 'BRG0006', 'Product NameMWE 450\r\nProduct NumberMPW-4502-ACABW\r\nTypeIntel Form Factor ATX 12V V2.31\r\nPFCActive PFC (>0.9 typical)\r\nInput Voltage200-240 Vac\r\nInput Current3.5A\r\nInput Frequency47-63Hz\r\nDimensions (LxBxH)140 x 150 x 86mm\r\nFan Size120mm\r\nFan BearingHDB\r\nFan Speed725-1460 RPM\r\nPower Good Signal100-500ms\r\nHold Up Time>14ms\r\nEfficiency85% @ Typically Load\r\nErP 2013 Lot 6Yes\r\nMTBF>100,000 Hours\r\nOperating Temperature40?C\r\nProtectionsOVP / OPP / OTP / SCP\r\nRegulatoryCE, TUV, EAC, RCM, CCC\r\nConnectorsMB 20+4 Pin1\r\nCPU 12V 4+4 Pin1\r\nSATA6\r\n4 Pin Peripheral3\r\nFDD Cable 4 Pin1\r\nPCI-e 6+2 Pin2\r\nWarranty3 Years ?\r\nCable typeEANUPC\r\nAR, AU, BR, EU, PH4719512060858884102033452\r\nUK4719512060193'),
-(7, 'BRG0007', 'GENERAL\r\nCapacity 2 TB\r\nInterface SATA 6Gb/s\r\nBytes per Sector 4096\r\nWeight 3.39 oz\r\nManufacturerSeagate Technology\r\nINTERFACE PROVIDED\r\nStorage Interface Serial ATA-600\r\nPERFORMANCE\r\nInternal Data Rate 140 MBps\r\nDrive Transfer Rate 600 MBps (external)\r\nEXPANSION & CONNECTIVITY\r\nInterfaces SATA 6 Gb/s\r\nHARD DRIVE\r\nForm Factor 2.5\"\r\nFeatures Adaptive Memory technology, Halogen Free, QuietStep\r\nHard Drive Type internal hard drive\r\nForm Factor (Short) 2.5\"\r\nForm Factor (metric) 6.4 cm\r\nForm Factor (Short) (metric) 6.4 cm\r\nStorage Interface Serial ATA-600\r\nInterface Serial ATA-600\r\nData Transfer Rate 600 MBps\r\nInternal Data Rate 140 MBps\r\nBytes per Sector 4096 Hz\r\nNon-Recoverable Errors 1 per 10^14\r\nLoad / Unload Cycles 600,000\r\nENVIRONMENTAL PARAMETERS\r\nMin Storage Temperature -40 ?F\r\nMax Storage Temperature 158 ?F\r\nMin Operating Temperature 32 ?F\r\nMax Operating Temperature 140 ?F\r\nHEADER\r\nBrand Seagate\r\nProduct Line Seagate FireCuda\r\nModel ST2000LX001\r\nPackaged Quantity 1\r\nCompatibility PC\r\nDIMENSIONS & WEIGHT\r\nWidth 2.7 in\r\nDepth 4 in\r\nHeight 0.3 in\r\nWeight 3.39 oz\r\nPOWER CONSUMPTION\r\nMode idle, read, write\r\nValue 0.5 Watt, 1.7 Watt, 1.8 Watt\r\nSERVICE & SUPPORT\r\nType 5 years warranty\r\nSERVICE & SUPPORT DETAILS\r\nType limited warranty\r\nFull Contract Period 5 years\r\nSHOCK & VIBRATION TOLERANCE\r\nShock Acceleration (Operating) 400 g\r\nShock Duration (Operating) 2 ms\r\nShock Acceleration (Non-operating) 1000 g\r\nShock Duration (Non-operating) 1 ms\r\nRELIABILITY\r\nNon-Recoverable Errors 1 per 10^14\r\nGENERAL\r\nManufacturerSeagate Technology');
+(7, 'BRG0007', 'GENERAL\r\nCapacity 2 TB\r\nInterface SATA 6Gb/s\r\nBytes per Sector 4096\r\nWeight 3.39 oz\r\nManufacturerSeagate Technology\r\nINTERFACE PROVIDED\r\nStorage Interface Serial ATA-600\r\nPERFORMANCE\r\nInternal Data Rate 140 MBps\r\nDrive Transfer Rate 600 MBps (external)\r\nEXPANSION & CONNECTIVITY\r\nInterfaces SATA 6 Gb/s\r\nHARD DRIVE\r\nForm Factor 2.5\"\r\nFeatures Adaptive Memory technology, Halogen Free, QuietStep\r\nHard Drive Type internal hard drive\r\nForm Factor (Short) 2.5\"\r\nForm Factor (metric) 6.4 cm\r\nForm Factor (Short) (metric) 6.4 cm\r\nStorage Interface Serial ATA-600\r\nInterface Serial ATA-600\r\nData Transfer Rate 600 MBps\r\nInternal Data Rate 140 MBps\r\nBytes per Sector 4096 Hz\r\nNon-Recoverable Errors 1 per 10^14\r\nLoad / Unload Cycles 600,000\r\nENVIRONMENTAL PARAMETERS\r\nMin Storage Temperature -40 ?F\r\nMax Storage Temperature 158 ?F\r\nMin Operating Temperature 32 ?F\r\nMax Operating Temperature 140 ?F\r\nHEADER\r\nBrand Seagate\r\nProduct Line Seagate FireCuda\r\nModel ST2000LX001\r\nPackaged Quantity 1\r\nCompatibility PC\r\nDIMENSIONS & WEIGHT\r\nWidth 2.7 in\r\nDepth 4 in\r\nHeight 0.3 in\r\nWeight 3.39 oz\r\nPOWER CONSUMPTION\r\nMode idle, read, write\r\nValue 0.5 Watt, 1.7 Watt, 1.8 Watt\r\nSERVICE & SUPPORT\r\nType 5 years warranty\r\nSERVICE & SUPPORT DETAILS\r\nType limited warranty\r\nFull Contract Period 5 years\r\nSHOCK & VIBRATION TOLERANCE\r\nShock Acceleration (Operating) 400 g\r\nShock Duration (Operating) 2 ms\r\nShock Acceleration (Non-operating) 1000 g\r\nShock Duration (Non-operating) 1 ms\r\nRELIABILITY\r\nNon-Recoverable Errors 1 per 10^14\r\nGENERAL\r\nManufacturerSeagate Technology'),
+(8, 'BRG0008', 'Spesifikasi:\nBase Clock: 3.7 GHz\nBoost Clock:4.3 GHz\nCore: 8\nL1 Cache:768KB\nL2 Cache: 4MB\nL3 Cache: 16MB\nDefault TDP: 105W'),
+(9, 'BRG0009', 'Spesifikasi:\nBase Clock: 3.4 GHz\nBoost Clock:4.0 GHz\nCore: 16\nL1 Cache:1.5MB\nL2 Cache: 8MB\nL3 Cache: 32MB\nDefault TDP: 180W'),
+(10, 'BRG0010', 'Spesifikasi:\nBase Clock: 2.8 GHz\nBoost Clock:4.2 GHz\nCore: 16\nCache: 22MB\nDefault TDP: 165W'),
+(11, 'BRG0011', 'Spesifikasi:\nInterface: PCI Express 3.0\nOutput: 3x Display Port HDMI\nClockSpeed: 1546 MHz\nMemory: 8 GB\nPower Consumption: 295W'),
+(12, 'BRG0012', 'Spesifikasi:\nInterface: PCI Express 3.0\nOutput: 3x Display Port HDMI\nClockSpeed: 1677 MHz\nMemory: 8 GB\nPower Consumption: 345W'),
+(13, 'BRG0013', 'Spesifikasi:\nInterface: PCI Express 3.0\nOutput: 3x Display Port HDMI\nClockSpeed: 1447 MHz\nMemory: 32 GB\nPower Consumption: 250W'),
+(14, 'BRG0014', 'Spesifikasi:\nAccess Time: DVD - 160ms, CD - 140ms\nRead Speed: DVD - 8x, CD - 24x\nTransfer Speed: DVD - 11 MB/s, CD - 3.6 MB/s'),
+(15, 'BRG0015', 'Spesifikasi:\nUkuran Memory: 4 GB\nForm Factor: DDR4\nSpeed: 2133 MHz\nVoltase: 1.5V'),
+(16, 'BRG0016', 'Spesifikasi:\nUkuran Memory: 4 GB\nForm Factor: DDR3\nSpeed: 1600 MHz\nVoltase: 1.5V'),
+(17, 'BRG0017', 'Spesifikasi:\nUkuran Memory: 8 GB\nForm Factor: DDR3\nSpeed: 1600 MHz\nVoltase: 1.5V'),
+(18, 'BRG0018', 'Spesifikasi:\nMax CPU: i7\nSocket: 1151\nChipset: Intel Z170 Express\nDDR4 Memory: 3600 MHz OC\nMemory Channel: Dual\nMemory Max: 64GB\nUSB Slot: 10'),
+(19, 'BRG0019', 'Spesifikasi:\nMax CPU: 8th Gen Intel Proc\nSocket: 1151\nChipset: Intel Z370\nDDR4 Memory: 4000 MHz OC\nMemory Channel\": Dual\nMemory Max: 64GB\nUSB Slot: 14'),
+(20, 'BRG0020', 'Spesifikasi:\nMax CPU: 8th Gen Intel Proc\nSocket: 1151\nChipset: Intel X299\nDDR4 Memory: 4000 MHz OC\nMemory Channel\": Dual\nMemory Max: 128GB\nUSB Slot: 18'),
+(21, 'BRG0021', 'Spesifikasi:\nPower: 450W\nInput: 100-240V\nFans: 1\nEfficiency: 92%'),
+(22, 'BRG0022', 'Spesifikasi:\nPower: 750W\nInput: 100-240V\nFans: 1\nEfficiency: 92%'),
+(23, 'BRG0023', 'Spesifikasi:\nPower: 750W\nInput: 100-240V\nFans: 1\nEfficiency: 92%'),
+(24, 'BRG0024', 'Spesifikasi:\nSize: 4TB\nMax Transfer: 600MB/s\nRotation: 5400RPM'),
+(25, 'BRG0025', 'Spesifikasi:\nSize: 1TB\nMax Transfer: 600MB/s\nRotation: 5400RPM'),
+(26, 'BRG0026', 'Spesifikasi:\nSize: 2TB\nMax Transfer: 600MB/s\nRotation: 5400RPM');
 
 --
 -- Indexes for dumped tables
@@ -397,7 +418,7 @@ ALTER TABLE `detail_barang`
 -- AUTO_INCREMENT for table `spesifikasi`
 --
 ALTER TABLE `spesifikasi`
-  MODIFY `ID_SPESIFIKASI` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID_SPESIFIKASI` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- Constraints for dumped tables
