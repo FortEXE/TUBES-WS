@@ -122,7 +122,7 @@ namespace PARTS.Controllers
         
         // PUT: api/Parts/5
         [HttpPut("UpdateBarang/{id}")]
-        public IActionResult Put(int id, [FromBody]Barang value)
+        public IActionResult Put(String id, [FromBody]Barang value)
         {
             RepositoryBarang RP = new RepositoryBarang();
 
@@ -138,7 +138,7 @@ namespace PARTS.Controllers
         }
 
         [HttpPut("UpdateKategori/{id}")]
-        public IActionResult Put(int id, [FromBody]Kategori value)
+        public IActionResult Put(String id, [FromBody]Kategori value)
         {
             RepositoryKategori RP = new RepositoryKategori();
 
@@ -175,7 +175,7 @@ namespace PARTS.Controllers
         
         // DELETE: api/parts/5
         [HttpDelete("DeleteBarang/{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult DeleteBarang(String id)
         {
             RepositoryBarang RP = new RepositoryBarang();
 
@@ -191,7 +191,7 @@ namespace PARTS.Controllers
         }
 
         [HttpDelete("DeleteKategori/{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult DeleteKategori(String id)
         {
             RepositoryKategori RP = new RepositoryKategori();
 
@@ -207,7 +207,7 @@ namespace PARTS.Controllers
         }
 
         [HttpDelete("DeleteSpesifikasi/{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult DeleteSpec(int id)
         {
             RepositorySpesifikasi RP = new RepositorySpesifikasi();
 
