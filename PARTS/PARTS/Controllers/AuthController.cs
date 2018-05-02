@@ -41,7 +41,7 @@ namespace PARTS.Controllers
                     var token = new JwtSecurityToken(
                         issuer: "computercorner.com",
                         audience: "computercorner.com",
-                        expires: DateTime.Now.AddMinutes(1),
+                        expires: DateTime.Now.AddMinutes(60),
                         claims: ClaimsData,
                         signingCredentials: signInCred
                         );
