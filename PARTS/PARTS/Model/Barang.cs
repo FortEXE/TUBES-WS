@@ -14,6 +14,7 @@ namespace PARTS.Controllers
         private string _merk_barang;
         private int _harga_barang;
         private int _stok_barang;
+        private string _image_barang;
 
         Barang() { }
 
@@ -24,5 +25,6 @@ namespace PARTS.Controllers
         public string Merk_barang { get => _merk_barang; set => _merk_barang = value; }
         public int Harga_barang { get => _harga_barang; set => _harga_barang = value; }
         public int Stok_barang { get => _stok_barang; set => _stok_barang = value; }
+        public string Image_barang { get => _image_barang; set => _image_barang = value; }
     }
 }

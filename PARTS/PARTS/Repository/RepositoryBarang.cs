@@ -59,8 +59,9 @@ namespace PARTS.Controllers
             string _merk_barang = brg.Merk_barang;
             int _harga_barang = brg.Harga_barang;
             int _stok_barang = brg.Stok_barang;
+            string _image_barang = brg.Image_barang;
 
-            string query = "INSERT INTO barang VALUES ('" + _id_barang + "', '" + _xid_kategori + "', "+ _xid_pengguna + " , '" + _nama_barang + "', '" + _merk_barang + "', " + _harga_barang + ", " + _stok_barang + ");";
+            string query = "INSERT INTO barang VALUES ('" + _id_barang + "', '" + _xid_kategori + "', "+ _xid_pengguna + " , '" + _nama_barang + "', '" + _merk_barang + "', " + _harga_barang + ", " + _stok_barang + ", '" + _image_barang + "');";
 
             OpenConnection();
             var hasil = myConn.Execute(query);
@@ -76,9 +77,10 @@ namespace PARTS.Controllers
             string _merk_barang = brg.Merk_barang;
             int _harga_barang = brg.Harga_barang;
             int _stok_barang = brg.Stok_barang;
+            string _image_barang = brg.Image_barang;
 
             string query =
-                "UPDATE barang SET XID_KATEGORI = '" + _id_barang + "', XID_PENGGUNA = '" + _xid_pengguna + "', NAMA_BARANG = '" + _nama_barang + "', MERK_BARANG = '" + _merk_barang + "', HARGA_BARANG = " + _harga_barang + ", STOK_BARANG = " + _stok_barang + " WHERE ID_BARANG = '" + _id_barang + "';";
+                "UPDATE barang SET XID_KATEGORI = '" + _id_barang + "', XID_PENGGUNA = '" + _xid_pengguna + "', NAMA_BARANG = '" + _nama_barang + "', MERK_BARANG = '" + _merk_barang + "', HARGA_BARANG = " + _harga_barang + ", STOK_BARANG = " + _stok_barang + ", IMAGE_BARANG = " + _image_barang + " WHERE ID_BARANG = '" + _id_barang + "';";
 
             OpenConnection();
             var hasil = myConn.Execute(query);
