@@ -24,10 +24,17 @@ namespace PARTS.Controllers
         public IActionResult GetBarang()
         {
             RepositoryBarang RP = new RepositoryBarang();
-            List<Barang> ListParts = RP.getAll();
 
+            try
+            {
+                List<Barang> List = RP.getAll();
+                return Ok(List);
+            }
+            catch (Exception e)
+            {
+                return NotFound();
+            }
             
-            return Ok(ListParts);
         }
 
         // GET: api/Parts/GetAllSpesifikasi
@@ -35,9 +42,17 @@ namespace PARTS.Controllers
         public IActionResult GetSpesifikasi()
         {
             RepositorySpesifikasi RP = new RepositorySpesifikasi();
-            List<Spesifikasi> ListParts = RP.getAll();
 
-            return Ok(ListParts);
+            try
+            {
+                List<Spesifikasi> List = RP.getAll();
+                return Ok(List);
+            }
+            catch (Exception e)
+            {
+                return NotFound();
+            }
+
         }
 
         // GET: api/Parts/GetAllKategori
@@ -45,9 +60,17 @@ namespace PARTS.Controllers
         public IActionResult GetKategori()
         {
             RepositoryKategori RP = new RepositoryKategori();
-            List<Kategori> ListParts = RP.getAll();
+            
+            try
+            {
+                List<Kategori> List = RP.getAll();
+                return Ok(List);
+            }
+            catch (Exception e)
+            {
+                return NotFound();
+            }
 
-            return Ok(ListParts);
         }
 
         // GET: api/Parts/GetAllDetailBarang
@@ -55,9 +78,17 @@ namespace PARTS.Controllers
         public IActionResult GetDetailBarang()
         {
             RepositoryDetailBarang RP = new RepositoryDetailBarang();
-            List<DetailBarang> ListParts = RP.getAll();
+            
+            try
+            {
+                List<DetailBarang> List = RP.getAll();
+                return Ok(List);
+            }
+            catch (Exception e)
+            {
+                return NotFound();
+            }
 
-            return Ok(ListParts);
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////
@@ -70,8 +101,16 @@ namespace PARTS.Controllers
         {
             RepositoryPengguna RP = new RepositoryPengguna();
 
-            var hasil = RP.getByID(id);
-            return Ok(hasil);
+            try
+            {
+                var hasil = RP.getByID(id);
+                return Ok(hasil);
+            }
+            catch (Exception e)
+            {
+                return NotFound();
+            }
+            
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////
@@ -87,12 +126,13 @@ namespace PARTS.Controllers
             try
             {
                 RP.insertData(value);
-                return Ok();
+                return Created("", value);
             }
             catch (Exception e)
             {
-                return NotFound();
+                return BadRequest();
             }
+            
         }
 
         [HttpPost("InsertKategori")]
@@ -103,12 +143,13 @@ namespace PARTS.Controllers
             try
             {
                 RP.insertData(value);
-                return Ok();
+                return Created("", value);
             }
             catch (Exception e)
             {
-                return NotFound();
+                return BadRequest();
             }
+            
         }
 
         [HttpPost("InsertSpesifikasi")]
@@ -119,12 +160,13 @@ namespace PARTS.Controllers
             try
             {
                 RP.insertData(value);
-                return Ok();
+                return Created("", value);
             }
             catch (Exception e)
             {
-                return NotFound();
+                return BadRequest();
             }
+            
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////

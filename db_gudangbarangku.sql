@@ -18,11 +18,56 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
+CREATE DATABASE db_gudangbarang;
+use db_gudangbarang;
+
 --
 -- Database: `db_gudangbarangku`
 --
 
 -- --------------------------------------------------------
+
+CREATE TABLE `kategori` (
+  `ID_KATEGORI` varchar(255) NOT NULL,
+  `NAMA_KATEGORI` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `kategori`
+--
+
+INSERT INTO `kategori` (`ID_KATEGORI`, `NAMA_KATEGORI`) VALUES
+('K00001', 'CPU'),
+('K00002', 'GPU'),
+('K00007', 'HDD'),
+('K00005', 'MOTHERBOARD'),
+('K00003', 'OPTICAL DRIVE'),
+('K00006', 'POWER SUPPLY'),
+('K00004', 'RAM');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pengguna`
+--
+
+CREATE TABLE `pengguna` (
+  `ID_PENGGUNA` int(11) NOT NULL,
+  `NAMA` varchar(255) NOT NULL,
+  `USERNAME` varchar(255) NOT NULL,
+  `EMAIL` varchar(255) NOT NULL,
+  `USER_TYPE` varchar(255) NOT NULL,
+  `PASSWORD` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pengguna`
+--
+
+INSERT INTO `pengguna` (`ID_PENGGUNA`, `NAMA`, `USERNAME`, `EMAIL`, `USER_TYPE`, `PASSWORD`) VALUES
+(1, 'Adnan Khairi', 'adnankhairi', 'adnankhairi@student.upi.edu', 'admin', 'C521CC3DA32F9176D0B2483D4D8CA433'),
+(2, 'adnan', 'adnan', 'squadron296@gmail.com', 'user', 'f3465a353436bbab3617815f64083c84'),
+(3, 'Alley', 'ali', 'ali@gmail.com', 'user', 'ali');
 
 --
 -- Table structure for table `barang`
@@ -278,47 +323,7 @@ INSERT INTO `detail_barang` (`ID_DETAIL_BARANG`, `ID_BARANG`, `NOMOR_SERI_DETAIL
 -- Table structure for table `kategori`
 --
 
-CREATE TABLE `kategori` (
-  `ID_KATEGORI` varchar(255) NOT NULL,
-  `NAMA_KATEGORI` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `kategori`
---
-
-INSERT INTO `kategori` (`ID_KATEGORI`, `NAMA_KATEGORI`) VALUES
-('K00001', 'CPU'),
-('K00002', 'GPU'),
-('K00007', 'HDD'),
-('K00005', 'MOTHERBOARD'),
-('K00003', 'OPTICAL DRIVE'),
-('K00006', 'POWER SUPPLY'),
-('K00004', 'RAM');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pengguna`
---
-
-CREATE TABLE `pengguna` (
-  `ID_PENGGUNA` int(11) NOT NULL,
-  `NAMA` varchar(255) NOT NULL,
-  `USERNAME` varchar(255) NOT NULL,
-  `EMAIL` varchar(255) NOT NULL,
-  `USER_TYPE` varchar(255) NOT NULL,
-  `PASSWORD` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `pengguna`
---
-
-INSERT INTO `pengguna` (`ID_PENGGUNA`, `NAMA`, `USERNAME`, `EMAIL`, `USER_TYPE`, `PASSWORD`) VALUES
-(1, 'Adnan Khairi', 'adnankhairi', 'adnankhairi@student.upi.edu', 'admin', 'C521CC3DA32F9176D0B2483D4D8CA433'),
-(2, 'adnan', 'adnan', 'squadron296@gmail.com', 'user', 'f3465a353436bbab3617815f64083c84'),
-(3, 'Alley', 'ali', 'ali@gmail.com', 'user', 'ali');
 
 -- --------------------------------------------------------
 
