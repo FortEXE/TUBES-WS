@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 06, 2018 at 05:26 PM
+-- Generation Time: May 06, 2018 at 05:32 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -318,7 +318,7 @@ CREATE TABLE `pengguna` (
 --
 
 INSERT INTO `pengguna` (`ID_PENGGUNA`, `NAMA`, `USERNAME`, `EMAIL`, `USER_TYPE`, `PASSWORD`) VALUES
-(1, 'Adnan Khairi', 'adnankhairi', 'adnankhairi@student.upi.edu', 'admin', '456B7016A916A4B178DD72B947C152B7'),
+(1, 'Adnan Khairi', 'adnankhairi', 'adnankhairi@student.upi.edu', 'admin', '21232F297A57A5A743894A0E4A801FC3'),
 (2, 'adnan', 'adnan', 'squadron296@gmail.com', 'user', 'f3465a353436bbab3617815f64083c84'),
 (3, 'Alley', 'ali', 'ali@gmail.com', 'user', '456B7016A916A4B178DD72B947C152B7');
 
