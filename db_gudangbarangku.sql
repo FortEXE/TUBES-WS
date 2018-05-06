@@ -103,7 +103,7 @@ CREATE TABLE `pengguna`  (
 -- Records of pengguna
 -- ----------------------------
 BEGIN;
-INSERT INTO `pengguna` VALUES (1, 'Adnan Khairi', 'adnankhairi', 'adnankhairi@student.upi.edu', 'admin', '456B7016A916A4B178DD72B947C152B7'), (2, 'adnan', 'adnan', 'squadron296@gmail.com', 'user', 'f3465a353436bbab3617815f64083c84'), (3, 'Alley', 'ali', 'ali@gmail.com', 'user', '456B7016A916A4B178DD72B947C152B7');
+INSERT INTO `pengguna` VALUES (1, 'Adnan Khairi', 'adnankhairi', 'adnankhairi@student.upi.edu', 'admin', '21232F297A57A5A743894A0E4A801FC3'), (2, 'adnan', 'adnan', 'squadron296@gmail.com', 'user', 'f3465a353436bbab3617815f64083c84'), (3, 'Alley', 'ali', 'ali@gmail.com', 'user', '456B7016A916A4B178DD72B947C152B7');
 COMMIT;
 
 -- ----------------------------
