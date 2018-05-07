@@ -238,7 +238,7 @@ namespace PARTS.Controllers
             }
             catch (Exception e)
             {
-                return NotFound();
+                return BadRequest();
             }
         }
 
@@ -254,7 +254,7 @@ namespace PARTS.Controllers
             }
             catch (Exception e)
             {
-                return NotFound();
+                return BadRequest();
             }
         }
 
@@ -270,7 +270,7 @@ namespace PARTS.Controllers
             }
             catch (Exception e)
             {
-                return NotFound();
+                return BadRequest();
             }
         }
 
@@ -291,7 +291,7 @@ namespace PARTS.Controllers
             }
             catch (Exception e)
             {
-                return NotFound();
+                return BadRequest();
             }
         }
 
@@ -307,7 +307,7 @@ namespace PARTS.Controllers
             }
             catch (Exception e)
             {
-                return NotFound();
+                return BadRequest();
             }
         }
 
@@ -323,7 +323,7 @@ namespace PARTS.Controllers
             }
             catch (Exception e)
             {
-                return NotFound();
+                return BadRequest();
             }
         }
 
