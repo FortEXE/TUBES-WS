@@ -50,6 +50,28 @@ namespace PARTS.Controllers
             return hasil;
         }
 
+        public List<Barang> getBarangByKategori(String xid_kategori)
+        {
+            string query = "SELECT * FROM barang WHERE XID_KATEGORI = '" + xid_kategori + "';";
+
+            OpenConnection();
+            List<Barang> hasil = myConn.Query<Barang>(query).ToList();
+            closeConnection();
+
+            return hasil;
+        }
+
+        public List<Barang> getBarangByMerk(String merk)
+        {
+            string query = "SELECT * FROM barang where MERK_BARANG = '" + merk + "';";
+
+            OpenConnection();
+            List<Barang> hasil = myConn.Query<Barang>(query).ToList();
+            closeConnection();
+
+            return hasil;
+        }
+
         public Barang getByID(String id)
         {
             string query = "SELECT * FROM barang WHERE ID_BARANG = '" + id + "';";

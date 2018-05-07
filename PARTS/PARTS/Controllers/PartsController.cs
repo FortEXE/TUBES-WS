@@ -165,6 +165,44 @@ namespace PARTS.Controllers
         }
         //
 
+        ////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////  GET BY (OTHERS)  ///////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////
+
+        [HttpGet("GetBarangByKategori/{idKategori}", Name = "GetBarangByKategori")]
+        public IActionResult GetBarangByKategori(String idKategori)
+        {
+            RepositoryBarang RP = new RepositoryBarang();
+
+            try
+            {
+                var hasil = RP.getBarangByKategori(idKategori);
+                return Ok(hasil);
+            }
+            catch (Exception)
+            {
+                return NotFound();
+            }
+
+        }
+
+        [HttpGet("GetBarangByMerk/{merk}", Name = "GetBarangByMerk")]
+        public IActionResult GetBarangByMerk(String merk)
+        {
+            RepositoryBarang RP = new RepositoryBarang();
+
+            try
+            {
+                var hasil = RP.getBarangByMerk(merk);
+                return Ok(hasil);
+            }
+            catch (Exception)
+            {
+                return NotFound();
+            }
+
+        }
+
         ///////////////////////////////
         ///////////////////////////// POST ////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////
