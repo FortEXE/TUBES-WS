@@ -50,6 +50,17 @@ namespace PARTS.Controllers
             return hasil;
         }
 
+        public Barang getByID(String id)
+        {
+            string query = "SELECT * FROM barang WHERE ID_BARANG = '" + id + "';";
+
+            OpenConnection();
+            Barang hasil = myConn.QuerySingle<Barang>(query);
+            closeConnection();
+
+            return hasil;
+        }
+
         public void insertData(Barang brg)
         {
             string _id_barang = brg.Id_barang;

@@ -113,10 +113,61 @@ namespace PARTS.Controllers
             
         }
 
+        [HttpGet("GetBarangById/{id}", Name = "Get")]
+        public IActionResult Get(String id)
+        {
+            RepositoryPengguna RP = new RepositoryPengguna();
+
+            try
+            {
+                var hasil = RP.getByID(id);
+                return Ok(hasil);
+            }
+            catch (Exception e)
+            {
+                return NotFound();
+            }
+
+        }
+
+        [HttpGet("GetSpesifikasiById/{id}", Name = "Get")]
+        public IActionResult Get(String id)
+        {
+            RepositoryPengguna RP = new RepositoryPengguna();
+
+            try
+            {
+                var hasil = RP.getByID(id);
+                return Ok(hasil);
+            }
+            catch (Exception e)
+            {
+                return NotFound();
+            }
+
+        }
+
+        [HttpGet("GetDetailBarangById/{id}", Name = "Get")]
+        public IActionResult Get(String id)
+        {
+            RepositoryPengguna RP = new RepositoryPengguna();
+
+            try
+            {
+                var hasil = RP.getByID(id);
+                return Ok(hasil);
+            }
+            catch (Exception e)
+            {
+                return NotFound();
+            }
+
+        }
+
         ////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////
-        
+
         // POST: api/Parts
         [HttpPost("InsertBarang")]
         public IActionResult Post([FromBody]Barang value)
