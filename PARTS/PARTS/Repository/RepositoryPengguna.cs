@@ -24,7 +24,7 @@ namespace PARTS.Repository
             {
                 myConn.Open();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
         }
