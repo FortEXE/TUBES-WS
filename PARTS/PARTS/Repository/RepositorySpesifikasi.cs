@@ -50,6 +50,17 @@ namespace PARTS.Controllers
             return hasil;
         }
 
+        public Spesifikasi getByID(String id)
+        {
+            string query = "SELECT * FROM spesifikasi WHERE XID_BARANG = '" + id + "';";
+
+            OpenConnection();
+            Spesifikasi hasil = myConn.QuerySingle<Spesifikasi>(query);
+            closeConnection();
+
+            return hasil;
+        }
+
         public void insertData(Spesifikasi spf)
         {
             int _id_spesifikasi = spf.Id_spesifikasi;
