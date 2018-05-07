@@ -214,9 +214,9 @@ namespace PARTS.Controllers
                 RP.insertData(value);
                 return Created("", value);
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                return BadRequest();
+                return BadRequest(value);
             }
             
         }
@@ -231,9 +231,9 @@ namespace PARTS.Controllers
                 RP.insertData(value);
                 return Created("", value);
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                return BadRequest();
+                return BadRequest(value);
             }
 
         }
