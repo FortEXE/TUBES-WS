@@ -96,8 +96,8 @@ namespace PARTS.Controllers
         ////////////////////////////////////////////////////////////////////////////////////////
 
         // GET: api/Parts/5
-        [HttpGet("GetPenggunaById/{id}", Name = "GetPenggunaById")]
-        public IActionResult GetPenggunaById(String id)
+        [HttpGet("GetPenggunaById/{id}", Name = "Get")]
+        public IActionResult Get(String id)
         {
             RepositoryPengguna RP = new RepositoryPengguna();
 
@@ -135,8 +135,7 @@ namespace PARTS.Controllers
         {
             RepositorySpesifikasi RP = new RepositorySpesifikasi();
 
-            return Ok();
-            /*try
+            try
             {
                 var hasil = RP.getByID(id);
                 return Ok(hasil);
@@ -144,7 +143,7 @@ namespace PARTS.Controllers
             catch (Exception e)
             {
                 return NotFound();
-            }*/
+            }
 
         }
 
@@ -153,17 +152,18 @@ namespace PARTS.Controllers
         {
             RepositoryDetailBarang RP = new RepositoryDetailBarang();
 
-            //try
-            //{
-            //    var hasil = RP.getByID(id);
-                return Ok(/*hasil*/);
-            //}
-            //catch (Exception e)
-            //{
-            //    return NotFound();
-            //}
+            try
+            {
+                var hasil = RP.getByID(id);
+                return Ok(hasil);
+            }
+            catch (Exception e)
+            {
+                return NotFound();
+            }
 
         }
+        //
 
         ////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////

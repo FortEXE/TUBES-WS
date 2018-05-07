@@ -14,6 +14,7 @@ namespace PARTS.Controllers
         private string _keterangan_detail;
 
         DetailBarang() { }
+        //
 
         public int Id_detail_barang { get => _id_detail_barang; set => _id_detail_barang = value; }
         public string Id_barang { get => _id_barang; set => _id_barang = value; }
