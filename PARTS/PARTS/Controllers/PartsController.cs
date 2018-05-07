@@ -113,10 +113,10 @@ namespace PARTS.Controllers
             
         }
 
-        [HttpGet("GetBarangById/{id}", Name = "Get")]
-        public IActionResult Get(String id)
+        [HttpGet("GetBarangById/{id}", Name = "GetBarangById")]
+        public IActionResult GetBarangById(String id)
         {
-            RepositoryPengguna RP = new RepositoryPengguna();
+            RepositoryBarang RP = new RepositoryBarang();
 
             try
             {
@@ -130,10 +130,10 @@ namespace PARTS.Controllers
 
         }
 
-        [HttpGet("GetSpesifikasiById/{id}", Name = "Get")]
-        public IActionResult Get(String id)
+        [HttpGet("GetSpesifikasiById/{id}", Name = "GetSpesifikasiById")]
+        public IActionResult GetSpesifikasiById(String id)
         {
-            RepositoryPengguna RP = new RepositoryPengguna();
+            RepositorySpesifikasi RP = new RepositorySpesifikasi();
 
             try
             {
@@ -147,10 +147,10 @@ namespace PARTS.Controllers
 
         }
 
-        [HttpGet("GetDetailBarangById/{id}", Name = "Get")]
-        public IActionResult Get(String id)
+        [HttpGet("GetDetailBarangById/{id}", Name = "GetDetailBarangById")]
+        public IActionResult GetDetailBarangById(String id)
         {
-            RepositoryPengguna RP = new RepositoryPengguna();
+            RepositoryDetailBarang RP = new RepositoryDetailBarang();
 
             try
             {
