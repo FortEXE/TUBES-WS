@@ -23,7 +23,7 @@ namespace PARTS.Controllers
             {
                 myConn.Open();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
         }

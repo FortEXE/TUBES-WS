@@ -67,7 +67,7 @@ namespace PARTS.Controllers
             string _xid_barang = spf.Xid_barang;
             string _rincian_spesifikasi = spf.Rincian_spesifikasi;
 
-            string query = "INSERT INTO spesifikasi VALUES (" + _id_spesifikasi + ", '" + _xid_barang + "', '" + _rincian_spesifikasi + "');";
+            string query = "INSERT INTO spesifikasi VALUES (null, '" + _xid_barang + "', '" + _rincian_spesifikasi + "');";
 
             OpenConnection();
             var hasil = myConn.Execute(query);

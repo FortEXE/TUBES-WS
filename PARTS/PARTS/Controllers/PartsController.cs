@@ -30,7 +30,7 @@ namespace PARTS.Controllers
                 List<Barang> List = RP.getAll();
                 return Ok(List);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return NotFound();
             }
@@ -48,7 +48,7 @@ namespace PARTS.Controllers
                 List<Spesifikasi> List = RP.getAll();
                 return Ok(List);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return NotFound();
             }
@@ -66,7 +66,7 @@ namespace PARTS.Controllers
                 List<Kategori> List = RP.getAll();
                 return Ok(List);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return NotFound();
             }
@@ -84,7 +84,7 @@ namespace PARTS.Controllers
                 List<DetailBarang> List = RP.getAll();
                 return Ok(List);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return NotFound();
             }
@@ -106,7 +106,7 @@ namespace PARTS.Controllers
                 var hasil = RP.getByID(id);
                 return Ok(hasil);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return NotFound();
             }
@@ -123,7 +123,7 @@ namespace PARTS.Controllers
                 var hasil = RP.getByID(id);
                 return Ok(hasil);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return NotFound();
             }
@@ -140,7 +140,7 @@ namespace PARTS.Controllers
                 var hasil = RP.getByID(id);
                 return Ok(hasil);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return NotFound();
             }
@@ -157,7 +157,7 @@ namespace PARTS.Controllers
                 var hasil = RP.getByID(id);
                 return Ok(hasil);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return NotFound();
             }
@@ -166,12 +166,50 @@ namespace PARTS.Controllers
         //
 
         ////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////  GET BY (OTHERS)  ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////
+
+        [HttpGet("GetBarangByKategori/{idKategori}", Name = "GetBarangByKategori")]
+        public IActionResult GetBarangByKategori(String idKategori)
+        {
+            RepositoryBarang RP = new RepositoryBarang();
+
+            try
+            {
+                var hasil = RP.getBarangByKategori(idKategori);
+                return Ok(hasil);
+            }
+            catch (Exception)
+            {
+                return NotFound();
+            }
+
+        }
+
+        [HttpGet("GetBarangByMerk/{merk}", Name = "GetBarangByMerk")]
+        public IActionResult GetBarangByMerk(String merk)
+        {
+            RepositoryBarang RP = new RepositoryBarang();
+
+            try
+            {
+                var hasil = RP.getBarangByMerk(merk);
+                return Ok(hasil);
+            }
+            catch (Exception)
+            {
+                return NotFound();
+            }
+
+        }
+
+        ///////////////////////////////
+        ///////////////////////////// POST ////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////
 
         // POST: api/Parts
         [HttpPost("InsertBarang")]
-        public IActionResult Post([FromBody]Barang value)
+        public IActionResult PostBarang([FromBody]Barang value)
         {
             RepositoryBarang RP = new RepositoryBarang();
 
@@ -180,7 +218,7 @@ namespace PARTS.Controllers
                 RP.insertData(value);
                 return Created("", value);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return BadRequest();
             }
@@ -188,7 +226,7 @@ namespace PARTS.Controllers
         }
 
         [HttpPost("InsertKategori")]
-        public IActionResult Post([FromBody]Kategori value)
+        public IActionResult PostKategori([FromBody]Kategori value)
         {
             RepositoryKategori RP = new RepositoryKategori();
 
@@ -197,7 +235,7 @@ namespace PARTS.Controllers
                 RP.insertData(value);
                 return Created("", value);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return BadRequest();
             }
@@ -205,7 +243,7 @@ namespace PARTS.Controllers
         }
 
         [HttpPost("InsertSpesifikasi")]
-        public IActionResult Post([FromBody]Spesifikasi value)
+        public IActionResult PostSpesifikasi([FromBody]Spesifikasi value)
         {
             RepositorySpesifikasi RP = new RepositorySpesifikasi();
 
@@ -216,18 +254,35 @@ namespace PARTS.Controllers
             }
             catch (Exception e)
             {
-                return BadRequest();
+                return BadRequest(value);
             }
             
         }
 
+        [HttpPost("InsertDetailBarang")]
+        public IActionResult PostDetailBarang([FromBody]DetailBarang value)
+        {
+            RepositoryDetailBarang RP = new RepositoryDetailBarang();
+
+            try
+            {
+                RP.insertData(value);
+                return Created("", value);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(value);
+            }
+
+        }
+
         ////////////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////// PUT ///////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////
-        ////////////////////////////////////////////////////////////////////////////////////////
-        
+
         // PUT: api/Parts/5
         [HttpPut("UpdateBarang/{id}")]
-        public IActionResult Put(String id, [FromBody]Barang value)
+        public IActionResult PutBarang(String id, [FromBody]Barang value)
         {
             RepositoryBarang RP = new RepositoryBarang();
 
@@ -236,14 +291,14 @@ namespace PARTS.Controllers
                 RP.updateData(id, value);
                 return Ok();
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                return NotFound();
+                return BadRequest();
             }
         }
 
         [HttpPut("UpdateKategori/{id}")]
-        public IActionResult Put(String id, [FromBody]Kategori value)
+        public IActionResult PutKategori(String id, [FromBody]Kategori value)
         {
             RepositoryKategori RP = new RepositoryKategori();
 
@@ -252,14 +307,14 @@ namespace PARTS.Controllers
                 RP.updateData(id, value);
                 return Ok();
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                return NotFound();
+                return BadRequest();
             }
         }
 
         [HttpPut("UpdateSpesifikasi/{id}")]
-        public IActionResult Put(int id, [FromBody]Spesifikasi value)
+        public IActionResult PutSpesifikasi(int id, [FromBody]Spesifikasi value)
         {
             RepositorySpesifikasi RP = new RepositorySpesifikasi();
 
@@ -268,16 +323,32 @@ namespace PARTS.Controllers
                 RP.updateData(id, value);
                 return Ok();
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                return NotFound();
+                return BadRequest();
+            }
+        }
+
+        [HttpPut("UpdateDetailBarang/{id}")]
+        public IActionResult PutDetailBarang(string id, [FromBody]DetailBarang value)
+        {
+            RepositoryDetailBarang RP = new RepositoryDetailBarang();
+
+            try
+            {
+                RP.updateData(id, value);
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return BadRequest();
             }
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////// DELETE ///////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////
-        ////////////////////////////////////////////////////////////////////////////////////////
-        
+
         // DELETE: api/parts/5
         [HttpDelete("DeleteBarang/{id}")]
         public IActionResult DeleteBarang(String id)
@@ -289,9 +360,9 @@ namespace PARTS.Controllers
                 RP.deleteData(id);
                 return Ok();
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                return NotFound();
+                return BadRequest();
             }
         }
 
@@ -305,9 +376,9 @@ namespace PARTS.Controllers
                 RP.deleteData(id);
                 return Ok();
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                return NotFound();
+                return BadRequest();
             }
         }
 
@@ -321,11 +392,26 @@ namespace PARTS.Controllers
                 RP.deleteData(id);
                 return Ok();
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                return NotFound();
+                return BadRequest();
             }
         }
 
+        [HttpDelete("DeleteDetailBarang/{id}")]
+        public IActionResult DeleteDetailBarang(int id)
+        {
+            RepositorySpesifikasi RP = new RepositorySpesifikasi();
+
+            try
+            {
+                RP.deleteData(id);
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
     }
 }
