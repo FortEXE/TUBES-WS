@@ -50,12 +50,12 @@ namespace PARTS.Controllers
             return hasil;
         }
 
-        public DetailBarang getByID(String id)
+        public List<DetailBarang> getByID(String id)
         {
             string query = "SELECT * FROM detail_barang WHERE ID_BARANG = '" + id + "';";
 
             OpenConnection();
-            DetailBarang hasil = myConn.QuerySingle<DetailBarang>(query);
+            List<DetailBarang> hasil = myConn.Query<DetailBarang>(query).ToList();
             closeConnection();
 
             return hasil;
