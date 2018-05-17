@@ -36,6 +36,12 @@ GetDetailBarangById/{id}
 	menerima satu parameter String untuk id
 	memberikan data yang sesuai dengan id masukan dari tabel DetailBarang
 
+GetBarangBySpesifikasi/{id-spesifikasi}
+	memberikan semua data barang sesuai id spesifikasi masukannya
+
+GetBarangByMerk/{id-merk}
+	memberikan semua data barang sesuai id merk masukannya
+
 ====================================
 POST
 ====================================
