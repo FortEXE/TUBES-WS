@@ -383,7 +383,7 @@ namespace PARTS.Controllers
         }
 
         [HttpDelete("DeleteSpesifikasi/{id}")]
-        public IActionResult DeleteSpec(int id)
+        public IActionResult DeleteSpec(string id)
         {
             RepositorySpesifikasi RP = new RepositorySpesifikasi();
 
@@ -399,9 +399,9 @@ namespace PARTS.Controllers
         }
 
         [HttpDelete("DeleteDetailBarang/{id}")]
-        public IActionResult DeleteDetailBarang(int id)
+        public IActionResult DeleteDetailBarang(string id)
         {
-            RepositorySpesifikasi RP = new RepositorySpesifikasi();
+            RepositoryDetailBarang RP = new RepositoryDetailBarang();
 
             try
             {
