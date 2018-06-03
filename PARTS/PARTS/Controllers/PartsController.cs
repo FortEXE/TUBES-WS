@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PARTS.Model;
 using PARTS.Repository;
 
 namespace PARTS.Controllers
@@ -86,7 +87,25 @@ namespace PARTS.Controllers
             }
             catch (Exception)
             {
-                return NotFound();
+                return NotFound("Oops");
+            }
+
+        }
+
+        // GET: api/Parts/GetDictionaries
+        [HttpGet("GetDictionaries")]
+        public IActionResult GetDictionary()
+        {
+            RepositoryDictionary RP = new RepositoryDictionary();
+
+            try
+            {
+                List<Dictionaries> List = RP.getDictionary();
+                return Ok(List);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e);
             }
 
         }
@@ -271,7 +290,7 @@ namespace PARTS.Controllers
             }
             catch (Exception e)
             {
-                return BadRequest(value);
+                return BadRequest(e);
             }
             
         }
@@ -288,7 +307,7 @@ namespace PARTS.Controllers
             }
             catch (Exception e)
             {
-                return BadRequest(value);
+                return BadRequest(e);
             }
 
         }
