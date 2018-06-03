@@ -8,29 +8,32 @@ namespace PARTS.Repository
 {
     public class RepositoryDictionary
     {
-        List<Dictionaries> dictionary = new List<Dictionaries>();
-        Dictionary<string, string> table_item = new Dictionary<string, string>();
+
 
         public List<Dictionaries> getDictionary()
         {
+            List<Dictionaries> dictionary = new List<Dictionaries>();
             Dictionaries pengguna = new Dictionaries();
             pengguna.Table_name = "Pengguna";
             pengguna.Dictionary.Add("id_pengguna", "int(11)");
+            pengguna.Dictionary.Add("nama", "varchar(255)");
             pengguna.Dictionary.Add("username", "varchar(255)");
             pengguna.Dictionary.Add("email", "varchar(255)");
             pengguna.Dictionary.Add("user_type", "varchar(255)");
             pengguna.Dictionary.Add("password", "varchar(255)");
-            pengguna.Dictionary.Add("id_pengguna", "varchar(255)");
+            
 
             dictionary.Add(pengguna);
 
             Dictionaries kategori = new Dictionaries();
+            pengguna.Table_name = "Kategori";
             kategori.Dictionary.Add("id_kategori", "varchar(255)");
             kategori.Dictionary.Add("nama_kategori", "varchar(255)");
 
             dictionary.Add(kategori);
 
             Dictionaries detail_barang = new Dictionaries();
+            pengguna.Table_name = "Detail_Barang";
             detail_barang.Dictionary.Add("id_detail_barang", "int(11)");
             detail_barang.Dictionary.Add("id_barang", "varchar(255)");
             detail_barang.Dictionary.Add("nomor_seri_detail", "varchar(255)");
@@ -40,6 +43,7 @@ namespace PARTS.Repository
             dictionary.Add(detail_barang);
 
             Dictionaries spesifikasi = new Dictionaries();
+            pengguna.Table_name = "Spesifikasi";
             spesifikasi.Dictionary.Add("id_spesifikasi", "int(255)");
             spesifikasi.Dictionary.Add("xid_barang", "varchar(255)");
             spesifikasi.Dictionary.Add("rincian_spesifikasi", "text");
@@ -47,6 +51,7 @@ namespace PARTS.Repository
             dictionary.Add(spesifikasi);
 
             Dictionaries barang = new Dictionaries();
+            pengguna.Table_name = "Barang";
             barang.Dictionary.Add("id_barang", "varchar(255)");
             barang.Dictionary.Add("xid_kategori", "varchar(255)");
             barang.Dictionary.Add("xid_pengguna", "int(11)");

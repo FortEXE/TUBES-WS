@@ -87,14 +87,14 @@ namespace PARTS.Controllers
             }
             catch (Exception)
             {
-                return NotFound();
+                return NotFound("Oops");
             }
 
         }
 
-        // GET: api/Parts/GetAllDetailBarang
+        // GET: api/Parts/GetDictionaries
         [HttpGet("GetDictionaries")]
-        public IActionResult GetDictionaries()
+        public IActionResult GetDictionary()
         {
             RepositoryDictionary RP = new RepositoryDictionary();
 
@@ -103,9 +103,9 @@ namespace PARTS.Controllers
                 List<Dictionaries> List = RP.getDictionary();
                 return Ok(List);
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                return NotFound();
+                return BadRequest(e);
             }
 
         }
