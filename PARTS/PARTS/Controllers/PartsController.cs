@@ -163,6 +163,23 @@ namespace PARTS.Controllers
             }
 
         }
+
+        [HttpGet("getByIdDetail/{id}", Name = "getByIdDetail")]
+        public IActionResult getByIdDetail(int id)
+        {
+            RepositoryDetailBarang RP = new RepositoryDetailBarang();
+
+            try
+            {
+                var hasil = RP.getByIdDetail(id);
+                return Ok(hasil);
+            }
+            catch (Exception)
+            {
+                return NotFound();
+            }
+
+        }
         //
 
         ////////////////////////////////////////////////////////////////////////////////////////
