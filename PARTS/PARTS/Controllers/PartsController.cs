@@ -310,9 +310,9 @@ namespace PARTS.Controllers
                 RP.updateData(id, value);
                 return Ok();
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                return BadRequest();
+                return BadRequest(e);
             }
         }
 
