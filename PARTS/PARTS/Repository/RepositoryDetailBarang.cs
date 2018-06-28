@@ -61,6 +61,17 @@ namespace PARTS.Controllers
             return hasil;
         }
 
+        public DetailBarang getByIdDetail(int id)
+        {
+            string query = "SELECT * FROM detail_barang WHERE ID_DETAIL_BARANG = '" + id + "';";
+
+            OpenConnection();
+            DetailBarang hasil = myConn.QuerySingle<DetailBarang>(query);
+            closeConnection();
+
+            return hasil;
+        }
+
         public void insertData(DetailBarang dtl)
         {
            int _id_detail_barang = dtl.Id_detail_barang;
@@ -93,7 +104,7 @@ namespace PARTS.Controllers
 
         public void deleteData(string Id)
         {
-            string query = "DELETE FROM detail_barang WHERE ID_BARANG = '" + Id + "';";
+            string query = "DELETE FROM detail_barang WHERE ID_DETAIL_BARANG = '" + Id + "';";
 
             OpenConnection();
             var hasil = myConn.Execute(query);
