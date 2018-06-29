@@ -11,7 +11,7 @@
  Target Server Version : 100131
  File Encoding         : 65001
 
- Date: 29/06/2018 14:48:16
+ Date: 29/06/2018 15:58:10
 */
 
 SET NAMES utf8mb4;
@@ -40,32 +40,32 @@ CREATE TABLE `barang`  (
 -- ----------------------------
 -- Records of barang
 -- ----------------------------
-INSERT INTO `barang` VALUES ('BRG0001', 'K00001', 1, 'INTEL CORE i789', 'INTEL', 7000000, 1, 'http://www.venuscomputers.pk/wp-content/uploads/2014/09/Core%E2%84%A2-i7-4790K-300x300.jpg');
-INSERT INTO `barang` VALUES ('BRG0002', 'K00002', 1, 'NVIDIA GTX 1080', 'NVIDIA', 8000000, 10, 'https://www.beritateknologi.com/wp-content/uploads/2017/04/38394_large_geforcegtx1080ti-01.png');
+INSERT INTO `barang` VALUES ('BRG0001', 'K00001', 1, 'INTEL CORE i789', 'INTEL', 7000000, 0, 'http://www.venuscomputers.pk/wp-content/uploads/2014/09/Core%E2%84%A2-i7-4790K-300x300.jpg');
+INSERT INTO `barang` VALUES ('BRG0002', 'K00002', 1, 'NVIDIA GTX 1080', 'NVIDIA', 8000000, 2, 'https://www.beritateknologi.com/wp-content/uploads/2017/04/38394_large_geforcegtx1080ti-01.png');
 INSERT INTO `barang` VALUES ('BRG0003', 'K00003', 1, 'Asus 8X External Slim', 'ASUS', 300000, 3, 'https://brain-images-ssl.cdn.dixons.com/2/0/21856102/u_21856102.jpg');
-INSERT INTO `barang` VALUES ('BRG0004', 'K00004', 1, 'Corsair Vengeance LPX', 'CORSAIR', 1000000, 10, 'https://images-na.ssl-images-amazon.com/images/I/51D9ofTCYcL._SL500_AC_SS350_.jpg');
-INSERT INTO `barang` VALUES ('BRG0005', 'K00005', 1, 'ASUS ROG STRIX B250H', 'ASUS', 2000000, 20, 'https://www.asus.com/media/global/products/UuXdqeEwqKCze4pL/P_setting_000_1_90_end_500.png');
-INSERT INTO `barang` VALUES ('BRG0006', 'K00006', 1, 'COOLER MASTER MWE 450', 'COOLER MASTER', 400000, 13, 'https://blossomzones.com/wp-content/uploads/2018/01/MWE-450.jpg');
-INSERT INTO `barang` VALUES ('BRG0007', 'K00007', 1, 'SEAGATE FIRECUDA 2.5', 'SEAGATE', 1000000, 8, 'https://images-na.ssl-images-amazon.com/images/I/915bJk4f6DL._SL1500_.jpg');
-INSERT INTO `barang` VALUES ('BRG0008', 'K00001', 1, 'AMD Ryzen 7 2700X', 'AMD', 5000000, 5, 'https://cdn.wccftech.com/wp-content/uploads/2018/01/AMD-Ryzen-2.jpg');
-INSERT INTO `barang` VALUES ('BRG0009', 'K00001', 1, 'AMD Ryzen Threadripper 1950X', 'AMD', 20000000, 3, 'http://www.legitreviews.com/wp-content/uploads/2017/08/threadripper-install-board-9.jpg');
-INSERT INTO `barang` VALUES ('BRG0010', 'K00001', 1, 'INTEL Core i9-7960X', 'INTEL', 25000000, 4, 'https://www.bhphotovideo.com/images/images2500x2500/intel_bx80673i97960x_core_i9_7960x_x_series_2_8_1361951.jpg');
-INSERT INTO `barang` VALUES ('BRG0011', 'K00002', 1, 'Radeon RX Vega 64', 'AMD', 25000000, 2, 'https://s2.bukalapak.com/img/2783212381/w-1000/Sapphire_Radeon_RX_VEGA_64_8GB_HBM2.jpg');
-INSERT INTO `barang` VALUES ('BRG0012', 'K00002', 1, 'Radeon RX Vega 64 Liquid Cooled', 'AMD', 17000000, 3, 'https://static.gigabyte.com/Product/3/6387/2017072816314295_big.png');
-INSERT INTO `barang` VALUES ('BRG0013', 'K00002', 1, 'NVIDIA Quadro GV100', 'NVIDIA', 150000000, 4, 'http://analisadaily.com/assets/image/news/small/2018/03/nvidia-quadro-gv100-didukung-ray-tracing-529128-1.jpg');
+INSERT INTO `barang` VALUES ('BRG0004', 'K00004', 1, 'Corsair Vengeance LPX', 'CORSAIR', 1000000, 7, 'https://images-na.ssl-images-amazon.com/images/I/51D9ofTCYcL._SL500_AC_SS350_.jpg');
+INSERT INTO `barang` VALUES ('BRG0005', 'K00005', 1, 'ASUS ROG STRIX B250H', 'ASUS', 2000000, 13, 'https://www.asus.com/media/global/products/UuXdqeEwqKCze4pL/P_setting_000_1_90_end_500.png');
+INSERT INTO `barang` VALUES ('BRG0006', 'K00006', 1, 'COOLER MASTER MWE 450', 'COOLER MASTER', 400000, 8, 'https://blossomzones.com/wp-content/uploads/2018/01/MWE-450.jpg');
+INSERT INTO `barang` VALUES ('BRG0007', 'K00007', 1, 'SEAGATE FIRECUDA 2.5', 'SEAGATE', 1000000, 5, 'https://images-na.ssl-images-amazon.com/images/I/915bJk4f6DL._SL1500_.jpg');
+INSERT INTO `barang` VALUES ('BRG0008', 'K00001', 1, 'AMD Ryzen 7 2700X', 'AMD', 5000000, 3, 'https://cdn.wccftech.com/wp-content/uploads/2018/01/AMD-Ryzen-2.jpg');
+INSERT INTO `barang` VALUES ('BRG0009', 'K00001', 1, 'AMD Ryzen Threadripper 1950X', 'AMD', 20000000, 2, 'http://www.legitreviews.com/wp-content/uploads/2017/08/threadripper-install-board-9.jpg');
+INSERT INTO `barang` VALUES ('BRG0010', 'K00001', 1, 'INTEL Core i9-7960X', 'INTEL', 25000000, 1, 'https://www.bhphotovideo.com/images/images2500x2500/intel_bx80673i97960x_core_i9_7960x_x_series_2_8_1361951.jpg');
+INSERT INTO `barang` VALUES ('BRG0011', 'K00002', 1, 'Radeon RX Vega 64', 'AMD', 25000000, 1, 'https://s2.bukalapak.com/img/2783212381/w-1000/Sapphire_Radeon_RX_VEGA_64_8GB_HBM2.jpg');
+INSERT INTO `barang` VALUES ('BRG0012', 'K00002', 1, 'Radeon RX Vega 64 Liquid Cooled', 'AMD', 17000000, 2, 'https://static.gigabyte.com/Product/3/6387/2017072816314295_big.png');
+INSERT INTO `barang` VALUES ('BRG0013', 'K00002', 1, 'NVIDIA Quadro GV100', 'NVIDIA', 150000000, 1, 'http://analisadaily.com/assets/image/news/small/2018/03/nvidia-quadro-gv100-didukung-ray-tracing-529128-1.jpg');
 INSERT INTO `barang` VALUES ('BRG0014', 'K00003', 1, 'Lenovo Thinkpad USB Slim', 'LENOVO', 25000000, 2, 'https://ecs7.tokopedia.net/img/cache/700/product-1/2017/3/31/138143071/138143071_a307811d-fb79-431e-951f-f46e0d23c33f_454_538.jpg');
-INSERT INTO `barang` VALUES ('BRG0015', 'K00004', 1, 'VGEN 4GB DDR4 PC', 'VGEN', 700000, 20, 'https://ecs7.tokopedia.net/img/cache/700/product-1/2017/12/6/4505638/4505638_ca42c05e-0def-47b4-b6cc-afb9c6808f0c_700_393.jpg');
-INSERT INTO `barang` VALUES ('BRG0016', 'K00004', 1, 'Kingstone 4GB DDR3 PC', 'KINGSTONE', 400000, 10, 'https://s2.bukalapak.com/img/2306451331/w-1000/RAM_DDR_3_4GB_KINGSTON_PC12800___PC310600_BARU.jpg');
-INSERT INTO `barang` VALUES ('BRG0017', 'K00004', 1, 'OCPC 8GB DDR3 PC', 'OCPC', 1400000, 15, 'https://s2.bukalapak.com/img/762722212/w-1000/Ram%20OCPC%20Xtreme%20DDR3%208GB%201600Mhz%20PC12800%20like%20new.JPG');
-INSERT INTO `barang` VALUES ('BRG0018', 'K00005', 1, 'MSI Gaming M3', 'MSI', 890000, 5, 'https://dstatic.computeruniverse.net/images/1000/90679650E5967F98222E4EA690E0A99E.jpg');
-INSERT INTO `barang` VALUES ('BRG0019', 'K00005', 1, 'ASUS Prime Z3', 'ASUS', 1500000, 5, 'https://productimages.hepsiburada.net/s/3/500/9603739844658.jpg');
-INSERT INTO `barang` VALUES ('BRG0020', 'K00005', 1, 'GYGABITE Aorus X', 'GYGABITE', 550000, 5, 'https://assets.hardwarezone.com/img/2017/08/gigabyte-x299-aorus-gaming.jpg');
-INSERT INTO `barang` VALUES ('BRG0021', 'K00006', 1, 'CORSAIR RM', 'CORSAIR', 550000, 5, 'http://cwsmgmt.corsair.com/media/catalog/product/r/m/rm1000_sideview_a.png');
-INSERT INTO `barang` VALUES ('BRG0022', 'K00006', 1, 'EVGA Super', 'EVGA', 550000, 5, 'http://cdn.pcpartpicker.com/static/forever/images/product/a4a40fbe050996aebbc73368a3d3449d.256p.jpg');
+INSERT INTO `barang` VALUES ('BRG0015', 'K00004', 1, 'VGEN 4GB DDR4 PC', 'VGEN', 700000, 15, 'https://ecs7.tokopedia.net/img/cache/700/product-1/2017/12/6/4505638/4505638_ca42c05e-0def-47b4-b6cc-afb9c6808f0c_700_393.jpg');
+INSERT INTO `barang` VALUES ('BRG0016', 'K00004', 1, 'Kingstone 4GB DDR3 PC', 'KINGSTONE', 400000, 6, 'https://s2.bukalapak.com/img/2306451331/w-1000/RAM_DDR_3_4GB_KINGSTON_PC12800___PC310600_BARU.jpg');
+INSERT INTO `barang` VALUES ('BRG0017', 'K00004', 1, 'OCPC 8GB DDR3 PC', 'OCPC', 1400000, 10, 'https://s2.bukalapak.com/img/762722212/w-1000/Ram%20OCPC%20Xtreme%20DDR3%208GB%201600Mhz%20PC12800%20like%20new.JPG');
+INSERT INTO `barang` VALUES ('BRG0018', 'K00005', 1, 'MSI Gaming M3', 'MSI', 890000, 4, 'https://dstatic.computeruniverse.net/images/1000/90679650E5967F98222E4EA690E0A99E.jpg');
+INSERT INTO `barang` VALUES ('BRG0019', 'K00005', 1, 'ASUS Prime Z3', 'ASUS', 1500000, 4, 'https://productimages.hepsiburada.net/s/3/500/9603739844658.jpg');
+INSERT INTO `barang` VALUES ('BRG0020', 'K00005', 1, 'GYGABITE Aorus X', 'GYGABITE', 550000, 4, 'https://assets.hardwarezone.com/img/2017/08/gigabyte-x299-aorus-gaming.jpg');
+INSERT INTO `barang` VALUES ('BRG0021', 'K00006', 1, 'CORSAIR RM', 'CORSAIR', 550000, 4, 'http://cwsmgmt.corsair.com/media/catalog/product/r/m/rm1000_sideview_a.png');
+INSERT INTO `barang` VALUES ('BRG0022', 'K00006', 1, 'EVGA Super', 'EVGA', 550000, 3, 'http://cdn.pcpartpicker.com/static/forever/images/product/a4a40fbe050996aebbc73368a3d3449d.256p.jpg');
 INSERT INTO `barang` VALUES ('BRG0023', 'K00006', 1, 'SEASONIC ', 'SEASONIC', 550000, 5, 'https://images10.newegg.com/BizIntell/item/17/151/17-151-122/2.jpg');
-INSERT INTO `barang` VALUES ('BRG0024', 'K00007', 1, 'Hardisk WD Int 3.5\" 4TB', 'WD', 2400000, 7, 'https://images-na.ssl-images-amazon.com/images/I/51fBk1rrkPL._SX425_.jpg');
-INSERT INTO `barang` VALUES ('BRG0025', 'K00007', 1, 'Seagate Barracuda Int 2.5\" 1TB', 'SEAGATE', 700000, 4, 'https://images-na.ssl-images-amazon.com/images/I/91kc-ob1WbL._SX425_.jpg');
-INSERT INTO `barang` VALUES ('BRG0026', 'K00007', 1, 'Seagate Firecuda Int 2.5\" 2TB', 'SEAGATE', 1500000, 3, 'https://images-na.ssl-images-amazon.com/images/I/91kuba4ECVL._SY450_.jpg');
+INSERT INTO `barang` VALUES ('BRG0024', 'K00007', 1, 'Hardisk WD Int 3.5\" 4TB', 'WD', 2400000, 3, 'https://images-na.ssl-images-amazon.com/images/I/51fBk1rrkPL._SX425_.jpg');
+INSERT INTO `barang` VALUES ('BRG0025', 'K00007', 1, 'Seagate Barracuda Int 2.5\" 1TB', 'SEAGATE', 700000, 0, 'https://images-na.ssl-images-amazon.com/images/I/91kc-ob1WbL._SX425_.jpg');
+INSERT INTO `barang` VALUES ('BRG0026', 'K00007', 1, 'Seagate Firecuda Int 2.5\" 2TB', 'SEAGATE', 1500000, 0, 'https://images-na.ssl-images-amazon.com/images/I/91kuba4ECVL._SY450_.jpg');
 
 -- ----------------------------
 -- Table structure for detail_barang
@@ -79,7 +79,7 @@ CREATE TABLE `detail_barang`  (
   `KETERANGAN_DETAIL` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   PRIMARY KEY (`ID_DETAIL_BARANG`) USING BTREE,
   INDEX `FK_MENDAPATKAN_DETAIL_BARANG`(`ID_BARANG`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 235 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 240 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of detail_barang
@@ -241,7 +241,11 @@ INSERT INTO `detail_barang` VALUES (222, 'BRG0024', 'HDD35I4-004', 'RESERVED', '
 INSERT INTO `detail_barang` VALUES (223, 'BRG0024', 'HDD35I4-005', 'RESERVED', '-');
 INSERT INTO `detail_barang` VALUES (224, 'BRG0024', 'HDD35I4-006', 'READY', '-');
 INSERT INTO `detail_barang` VALUES (225, 'BRG0024', 'HDD35I4-007', 'READY', '-');
-INSERT INTO `detail_barang` VALUES (227, 'BRG0001', 'asddd', 'READY', '=====');
+INSERT INTO `detail_barang` VALUES (235, 'BRG0002', '76876876', 'DEFACED', 'Ada');
+INSERT INTO `detail_barang` VALUES (236, 'BRG0002', 'NVIDIATP001', 'READY', 'NOrmal normal saja');
+INSERT INTO `detail_barang` VALUES (237, 'BRG0002', 'NVIDIATP002', 'READY', 'ada');
+INSERT INTO `detail_barang` VALUES (238, 'BRG0010', 'i9-01', 'PENDING', '-');
+INSERT INTO `detail_barang` VALUES (239, 'BRG0001', 'i9-001', 'DEFACED', '-');
 
 -- ----------------------------
 -- Table structure for kategori
@@ -265,6 +269,20 @@ INSERT INTO `kategori` VALUES ('K00005', 'MOTHERBOARD');
 INSERT INTO `kategori` VALUES ('K00003', 'OPTICAL DRIVE');
 INSERT INTO `kategori` VALUES ('K00006', 'POWER SUPPLY');
 INSERT INTO `kategori` VALUES ('K00004', 'RAM');
+
+-- ----------------------------
+-- Table structure for log_detail_barang
+-- ----------------------------
+DROP TABLE IF EXISTS `log_detail_barang`;
+CREATE TABLE `log_detail_barang`  (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `ID_BARANG` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `NOMOR_SERI_DETAIL` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `WAKTU` datetime(0) NOT NULL,
+  `STATUS_LAMA` enum('READY','PENDING','DEFACED','RESERVED') CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `STATUS_BARU` enum('READY','PENDING','DEFACED','RESERVED') CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  PRIMARY KEY (`ID`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Table structure for pengguna
@@ -303,8 +321,8 @@ CREATE TABLE `spesifikasi`  (
 -- ----------------------------
 -- Records of spesifikasi
 -- ----------------------------
-INSERT INTO `spesifikasi` VALUES (1, 'BRG0001', 'PROCESSORSSSSSSSSSSSSSSSSSS\r\nNumber of Cores Quad-Core\r\nProcessor Number i7-7700\r\nCompatible Processor Socket LGA1151 Socket\r\nClock Speed 3.6 GHz\r\nMax Turbo Speed 4.2 GHz\r\nType / Form Factor Intel Core i7 7700 (7th Gen)\r\nCache Memory Details Smart Cache - 8 MB\r\nProcessor Qty 1\r\nType Core i7\r\nNumber of Threads 8 threads\r\nGeneration 7\r\nInstalled Qty 1\r\nArchitecture Features Enhanced SpeedStep technology, Execute Disable Bit capability, Intel Virtualization Technology, Intel 64 Technology, Intel Trusted Execution Technology, Intel Turbo Boost Technology 2.0, Intel AES New Instructions (AES-NI), Thermal Monitoring Technologies, Intel Virtualization Technology for Directed I/O (VT-d), Intel vPro Technology, Idle States, Intel Identity Protection Technology, Intel Secure Key, Intel Advanced Vector Extensions 2 (AVX2.0), Intel TSX-NI, Intel Stable Image Platform Program (SIPP), Intel Software Guard Extensions (SGX), Intel Memory Protection Extensions (MPX), Intel Device Protection Technology with Boot Guard\r\nCache 8 MB\r\nManufacturer Intel\r\nManufacturing Process 14 nm\r\nThermal Specification 100 ?C\r\nFeatures Enhanced SpeedStep technology, Execute Disable Bit capability, Intel Software Guard Extensions (SGX), Intel Stable Image Platform Program (SIPP), Intel TSX-NI, Intel Trusted Execution Technology, Intel Turbo Boost Technology 2.0, Intel Virtualization Technology, Intel Virtualization Technology for Directed I/O (VT-d), Intel vPro Technology, Thermal Monitoring Technologies, Idle States, Intel 64 Technology, Intel AES New Instructions (AES-NI), Intel Advanced Vector Extensions 2 (AVX2.0), Intel Device Protection Technology with Boot Guard, Intel Identity Protection Technology, Intel Memory Protection Extensions (MPX), Intel Secure Key\r\nMISCELLANEOUS\r\nProduct Type processor\r\nProcessor Package Intel Boxed\r\nHEADER\r\nBrand Intel\r\nPackaged Quantity 1\r\nCompatibility PC\r\nCACHE MEMORY DETAILS\r\nTechnology Smart Cache\r\nInstalled Size 8 MB\r\nINTEGRATED GRAPHICS\r\nType Intel HD Graphics 630\r\nBase Frequency 350 MHz\r\nMax Dynamic Frequency 1.15 GHz\r\nFeatures InTRU 3D Technology, Intel Clear Video HD Technology, Intel Clear Video Technology, Intel Quick Sync Video, Triple Display Capable\r\nGENERAL\r\nManufacturerIntel                                                                                                ');
-INSERT INTO `spesifikasi` VALUES (2, 'BRG0002', 'nama: GTX 1080\r\nCUDA CORES: 2560\r\ngraphics clock: 1607 MHz\r\nProcessor clock: 1733 Mhz\r\nMemory clock: 10Gbps\r\nmemory config: 8GB GDDR5X\r\nmemory interface: GDDR5\r\nBus Support: PCIe 3.0\r\nSupported Technologies: SLI, CUDA, 3D Vision, PhysX, NVIDIA G-SYNCT, GameStream, ShadowWorks, DirectX 12, Virtual Reality, Ansel, NVIDIA WhisperMode\r\nMaximum Digital Resolution: 7680x4320@60Hz\r\nStandard Display Connectors\r\nDP 1.42, HDMI 2.0b, DL-DVI\r\nMaximum GPU Temperature (in C): 94\r\nMaximum Graphics Card Power (W): 180\r\nMinimum System Power Requirement (W): 500\r\nSupplementary Power Connectors: 8-pin\r\n\r\n\r\n            ');
+INSERT INTO `spesifikasi` VALUES (1, 'BRG0001', 'PROCESSOR\r\nNumber of Cores Quad-Core\r\nProcessor Number i7-7700\r\nCompatible Processor Socket LGA1151 Socket\r\nClock Speed 3.6 GHz\r\nMax Turbo Speed 4.2 GHz\r\nType / Form Factor Intel Core i7 7700 (7th Gen)\r\nCache Memory Details Smart Cache - 8 MB\r\nProcessor Qty 1\r\nType Core i7\r\nNumber of Threads 8 threads\r\nGeneration 7\r\nInstalled Qty 1\r\nArchitecture Features Enhanced SpeedStep technology, Execute Disable Bit capability, Intel Virtualization Technology, Intel 64 Technology, Intel Trusted Execution Technology, Intel Turbo Boost Technology 2.0, Intel AES New Instructions (AES-NI), Thermal Monitoring Technologies, Intel Virtualization Technology for Directed I/O (VT-d), Intel vPro Technology, Idle States, Intel Identity Protection Technology, Intel Secure Key, Intel Advanced Vector Extensions 2 (AVX2.0), Intel TSX-NI, Intel Stable Image Platform Program (SIPP), Intel Software Guard Extensions (SGX), Intel Memory Protection Extensions (MPX), Intel Device Protection Technology with Boot Guard\r\nCache 8 MB\r\nManufacturer Intel\r\nManufacturing Process 14 nm\r\nThermal Specification 100 ?C\r\nFeatures Enhanced SpeedStep technology, Execute Disable Bit capability, Intel Software Guard Extensions (SGX), Intel Stable Image Platform Program (SIPP), Intel TSX-NI, Intel Trusted Execution Technology, Intel Turbo Boost Technology 2.0, Intel Virtualization Technology, Intel Virtualization Technology for Directed I/O (VT-d), Intel vPro Technology, Thermal Monitoring Technologies, Idle States, Intel 64 Technology, Intel AES New Instructions (AES-NI), Intel Advanced Vector Extensions 2 (AVX2.0), Intel Device Protection Technology with Boot Guard, Intel Identity Protection Technology, Intel Memory Protection Extensions (MPX), Intel Secure Key\r\nMISCELLANEOUS\r\nProduct Type processor\r\nProcessor Package Intel Boxed\r\nHEADER\r\nBrand Intel\r\nPackaged Quantity 1\r\nCompatibility PC\r\nCACHE MEMORY DETAILS\r\nTechnology Smart Cache\r\nInstalled Size 8 MB\r\nINTEGRATED GRAPHICS\r\nType Intel HD Graphics 630\r\nBase Frequency 350 MHz\r\nMax Dynamic Frequency 1.15 GHz\r\nFeatures InTRU 3D Technology, Intel Clear Video HD Technology, Intel Clear Video Technology, Intel Quick Sync Video, Triple Display Capable\r\nGENERAL\r\nManufacturerIntel                                                                                                            ');
+INSERT INTO `spesifikasi` VALUES (2, 'BRG0002', 'nama: GTX 1080\r\nCUDA CORES: 2560\r\ngraphics clock: 1607 MHz\r\nProcessor clock: 1733 Mhz\r\nMemory clock: 11Gbps\r\nmemory config: 8GB GDDR5X\r\nmemory interface: GDDR5\r\nBus Support: PCIe 3.0\r\nSupported Technologies: SLI, CUDA, 3D Vision, PhysX, NVIDIA G-SYNCT, GameStream, ShadowWorks, DirectX 12, Virtual Reality, Ansel, NVIDIA WhisperMode\r\nMaximum Digital Resolution: 7680x4320@60Hz\r\nStandard Display Connectors\r\nDP 1.42, HDMI 2.0b, DL-DVI\r\nMaximum GPU Temperature (in C): 94\r\nMaximum Graphics Card Power (W): 180\r\nMinimum System Power Requirement (W): 500\r\nSupplementary Power Connectors: 8-pin\r\n\r\n\r\n                        ');
 INSERT INTO `spesifikasi` VALUES (3, 'BRG0003', 'GENERAL\r\nDevice Type DVD?RW (?R DL) / DVD-RAM drive - external\r\nManufacturer Asus\r\nSTORAGE\r\nDrive Type DVD writer\r\nProduct Type DVD?RW (?R DL) / DVD-RAM drive\r\nEnclosure Type external\r\nInterface USB 2.0\r\nOPTICAL STORAGE\r\nType DVD?RW (?R DL) / DVD-RAM\r\nSpeeds 8x/8x/5x\r\nRead Speed 24x (CD) / 8x (DVD)\r\nWrite Speed 24x (CD) / 8x (DVD?R) / 6x (DVD?R DL)\r\nRewrite Speed 16x (CD) / 6x (DVD-RW) / 8x (DVD+RW) / 5x (DVD-RAM)\r\nSupported Recording Modes disk-at-once, incremental recording, multisession, packet writing, random access write, restricted overwrite, sequential write, session-at-once, track-at-once\r\nSupported Media Formats CD Extra, CD Text, CD-DA (audio), CD-I, CD-ROM, CD-ROM XA, DVD-Video, Photo CD, Video CD\r\nSupported Media Types CD-R, CD-ROM, DVD-RW, CD-RW, DVD+R, DVD+R DL, DVD-RAM, DVD-ROM\r\nBuffer Size 1 MB\r\nAccess Time 140 sec, 160 sec\r\nFeatures Disc Encryption, E-Green Engine technology, USB powered, horizontal/vertical mountable\r\nCompliant Standards Video CD\r\nPOWER DEVICE\r\nType none\r\nMISCELLANEOUS\r\nMicrosoft Certifications Compatible with Windows 7\r\nColor black\r\nColor Category black\r\nINTERFACE PROVIDED\r\nQty 1\r\nConnector Type 4 pin USB Type A\r\nInterface USB 2.0\r\nVIDEO\r\nVideo Output none\r\nSOFTWARE / SYSTEM REQUIREMENTS\r\nOS Required Microsoft Windows XP, Microsoft Windows 7, Microsoft Windows Vista\r\nSYSTEM REQUIREMENTS\r\nOS Required Microsoft Windows 7, Microsoft Windows Vista, Microsoft Windows XP\r\nENVIRONMENTAL PARAMETERS\r\nMin Operating Temperature 41 ?F\r\nMax Operating Temperature 104 ?F\r\nHumidity Range Operating 15 - 80%\r\nHEADER\r\nBrand ASUS\r\nProduct Line ASUS SDRW\r\nModel 08D2S-U\r\nPackaged Quantity 1\r\nCompatibility PC\r\nEXPANSION SLOTS\r\nType none\r\nDIMENSIONS & WEIGHT\r\nWidth 5.6 in\r\nDepth 6.2 in\r\nHeight 0.8 in\r\nWeight 11.04 oz\r\nBAY REQUIRED\r\nType none\r\nSLOT REQUIRED\r\nType none\r\nSOFTWARE\r\nType CyberLink Power2Go\r\nSYSTEM REQUIREMENTS DETAILS\r\nProcessor Type Pentium 4\r\nMin RAM Size 512 MB\r\nMin Hard Drive Space 10 GB\r\nGENERAL\r\nManufacturerAsus');
 INSERT INTO `spesifikasi` VALUES (4, 'BRG0004', 'GENERAL\r\nMemory Specification Compliance PC4-24000\r\nMemory Speed 3000 MHz\r\nData Integrity Check non-ECC\r\nUpgrade Type generic\r\nManufacturerCorsair Microsystems Inc.\r\nMEMORY\r\nLatency Timings CL15 ( 15-17-17-35 )\r\nData Integrity Check Non-ECC\r\nRAM Performance SPD - 2133 MHz - 1.2 V - CL15 - 15-15-15-36\r\nTested - 3000 MHz - 1.35 V - CL15 - 15-17-17-35\r\nRAM\r\nType DRAM\r\nForm Factor DIMM 288-pin\r\nTechnology DDR4 SDRAM\r\nStorage Capacity 16 GB\r\nRegistered or Buffered unbuffered\r\nSupply Voltage 1.35 V\r\nCAS Latency CL15\r\nLatency Timings 15-17-17-35\r\nRAM Features 8 Layers PCB heatspreader, Intel Extreme Memory Profiles (XMP 2.0), Vengeance LPX low profile heatspreader, anodized aluminum heatspreader, dual channel\r\nHEADER\r\nBrand Corsair\r\nProduct Line Corsair Vengeance\r\nModel LPX\r\nPackaged Quantity 1\r\nCompatibility PC\r\nRAM PERFORMANCE\r\nProfile SPD, Tested\r\nSpeed 2133 MHz, 3000 MHz\r\nVoltage 1.2 V, 1.35 V\r\nCAS Latency CL15, CL15\r\nLatency Timing 15-15-15-36, 15-17-17-35\r\nMEMORY MODULE\r\nModules in Kit 2\r\nCapacity of Module in Kit 8 GB\r\nSERVICE & SUPPORT\r\nType limited lifetime warranty\r\nGENERAL\r\nManufacturerCorsair Microsystems Inc.');
 INSERT INTO `spesifikasi` VALUES (5, 'BRG0005', '6 x USB 2.0\r\n(2 mid-board, 4 rear)\r\nDVI\r\nHDMI\r\n6 x USB 3.0\r\n(4 mid-board, 2 rear)\r\nIntel? I219-V Gigabit LAN \r\nGameFirst Technology\r\nLANGuard\r\nSupremeFX 8-Channel Audio\r\nOptical S/PDIF out\r\n1x PCIe 3.0 x 16 (support x16) \r\n1x PCIe 3.0 x 16 (support x4)\r\n4 x PCIe 3.0 x 1\r\nSupremeFX S1220A Codec \r\n? Impedance sense\r\n? High quality output and input\r\n? SupremeFX shielding\r\n? Dual headphone amplifiers\r\nDDR4 2400/2133MHz \r\n4 x DIMM, dual-channel \r\nSupport XMP\r\nIntel? Socket 1151\r\nM.2 Socket 3 Type M (2242-2280)\r\nSupports SATA and PCIe 3.0 x 4 modes\r\n6 x SATA 6Gb/s\r\nM.2 Socket 3 Type M (2242-22110) \r\nSupports PCIe 3.0 x 4 mode \r\nCLRTC Header');
@@ -339,6 +357,8 @@ CREATE TRIGGER `add_stok` AFTER INSERT ON `detail_barang` FOR EACH ROW BEGIN
 	IF NEW.STATUS_DETAIL = 'READY' THEN
 		UPDATE barang SET STOK_BARANG = STOK_BARANG + 1 WHERE ID_BARANG = NEW.ID_BARANG;
 	END IF;
+	INSERT INTO log_detail_barang(ID_BARANG, NOMOR_SERI_DETAIL, WAKTU, STATUS_LAMA, STATUS_BARU) VALUES
+		(NEW.ID_BARANG, NEW.NOMOR_SERI_DETAIL, CURRENT_TIMESTAMP(), null, NEW.STATUS_DETAIL);
 END
 ;;
 delimiter ;
@@ -354,6 +374,8 @@ CREATE TRIGGER `mod_stok` AFTER UPDATE ON `detail_barang` FOR EACH ROW BEGIN
 	ELSEIF NEW.STATUS_DETAIL != 'READY' AND OLD.STATUS_DETAIL = 'READY' THEN
 		UPDATE barang SET STOK_BARANG = STOK_BARANG - 1 WHERE ID_BARANG = NEW.ID_BARANG;
 	END IF;
+	INSERT INTO log_detail_barang(ID_BARANG, NOMOR_SERI_DETAIL, WAKTU, STATUS_LAMA, STATUS_BARU) VALUES
+		(NEW.ID_BARANG, NEW.NOMOR_SERI_DETAIL, CURRENT_TIMESTAMP(), OLD.STATUS_DETAIL, NEW.STATUS_DETAIL);
 END
 ;;
 delimiter ;
@@ -367,6 +389,8 @@ CREATE TRIGGER `del_stok` BEFORE DELETE ON `detail_barang` FOR EACH ROW BEGIN
 	IF OLD.STATUS_DETAIL = 'READY' THEN
 		UPDATE barang SET STOK_BARANG = STOK_BARANG - 1 WHERE ID_BARANG = OLD.ID_BARANG;
 	END IF;
+	INSERT INTO log_detail_barang(ID_BARANG, NOMOR_SERI_DETAIL, WAKTU, STATUS_LAMA, STATUS_BARU) VALUES
+		(OLD.ID_BARANG, OLD.NOMOR_SERI_DETAIL, CURRENT_TIMESTAMP(), OLD.STATUS_DETAIL, null);
 END
 ;;
 delimiter ;
