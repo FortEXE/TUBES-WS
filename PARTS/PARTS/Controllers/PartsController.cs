@@ -477,9 +477,9 @@ namespace PARTS.Controllers
                 RP.deleteData(id);
                 return Ok();
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                return BadRequest();
+                return BadRequest(e.ToString());
             }
         }
 
@@ -493,9 +493,9 @@ namespace PARTS.Controllers
                 RP.deleteById(id);
                 return Ok();
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                return BadRequest();
+                return BadRequest(e.ToString());
             }
         }
     }

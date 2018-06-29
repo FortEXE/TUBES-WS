@@ -11,7 +11,7 @@
  Target Server Version : 100131
  File Encoding         : 65001
 
- Date: 29/06/2018 15:58:10
+ Date: 29/06/2018 17:10:31
 */
 
 SET NAMES utf8mb4;
@@ -40,7 +40,7 @@ CREATE TABLE `barang`  (
 -- ----------------------------
 -- Records of barang
 -- ----------------------------
-INSERT INTO `barang` VALUES ('BRG0001', 'K00001', 1, 'INTEL CORE i789', 'INTEL', 7000000, 0, 'http://www.venuscomputers.pk/wp-content/uploads/2014/09/Core%E2%84%A2-i7-4790K-300x300.jpg');
+INSERT INTO `barang` VALUES ('BRG0001', 'K00001', 1, 'INTEL CORE i789', 'INTEL', 7000000, 2, 'http://www.venuscomputers.pk/wp-content/uploads/2014/09/Core%E2%84%A2-i7-4790K-300x300.jpg');
 INSERT INTO `barang` VALUES ('BRG0002', 'K00002', 1, 'NVIDIA GTX 1080', 'NVIDIA', 8000000, 2, 'https://www.beritateknologi.com/wp-content/uploads/2017/04/38394_large_geforcegtx1080ti-01.png');
 INSERT INTO `barang` VALUES ('BRG0003', 'K00003', 1, 'Asus 8X External Slim', 'ASUS', 300000, 3, 'https://brain-images-ssl.cdn.dixons.com/2/0/21856102/u_21856102.jpg');
 INSERT INTO `barang` VALUES ('BRG0004', 'K00004', 1, 'Corsair Vengeance LPX', 'CORSAIR', 1000000, 7, 'https://images-na.ssl-images-amazon.com/images/I/51D9ofTCYcL._SL500_AC_SS350_.jpg');
@@ -63,9 +63,7 @@ INSERT INTO `barang` VALUES ('BRG0020', 'K00005', 1, 'GYGABITE Aorus X', 'GYGABI
 INSERT INTO `barang` VALUES ('BRG0021', 'K00006', 1, 'CORSAIR RM', 'CORSAIR', 550000, 4, 'http://cwsmgmt.corsair.com/media/catalog/product/r/m/rm1000_sideview_a.png');
 INSERT INTO `barang` VALUES ('BRG0022', 'K00006', 1, 'EVGA Super', 'EVGA', 550000, 3, 'http://cdn.pcpartpicker.com/static/forever/images/product/a4a40fbe050996aebbc73368a3d3449d.256p.jpg');
 INSERT INTO `barang` VALUES ('BRG0023', 'K00006', 1, 'SEASONIC ', 'SEASONIC', 550000, 5, 'https://images10.newegg.com/BizIntell/item/17/151/17-151-122/2.jpg');
-INSERT INTO `barang` VALUES ('BRG0024', 'K00007', 1, 'Hardisk WD Int 3.5\" 4TB', 'WD', 2400000, 3, 'https://images-na.ssl-images-amazon.com/images/I/51fBk1rrkPL._SX425_.jpg');
 INSERT INTO `barang` VALUES ('BRG0025', 'K00007', 1, 'Seagate Barracuda Int 2.5\" 1TB', 'SEAGATE', 700000, 0, 'https://images-na.ssl-images-amazon.com/images/I/91kc-ob1WbL._SX425_.jpg');
-INSERT INTO `barang` VALUES ('BRG0026', 'K00007', 1, 'Seagate Firecuda Int 2.5\" 2TB', 'SEAGATE', 1500000, 0, 'https://images-na.ssl-images-amazon.com/images/I/91kuba4ECVL._SY450_.jpg');
 
 -- ----------------------------
 -- Table structure for detail_barang
@@ -79,7 +77,7 @@ CREATE TABLE `detail_barang`  (
   `KETERANGAN_DETAIL` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   PRIMARY KEY (`ID_DETAIL_BARANG`) USING BTREE,
   INDEX `FK_MENDAPATKAN_DETAIL_BARANG`(`ID_BARANG`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 240 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 243 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of detail_barang
@@ -245,7 +243,9 @@ INSERT INTO `detail_barang` VALUES (235, 'BRG0002', '76876876', 'DEFACED', 'Ada'
 INSERT INTO `detail_barang` VALUES (236, 'BRG0002', 'NVIDIATP001', 'READY', 'NOrmal normal saja');
 INSERT INTO `detail_barang` VALUES (237, 'BRG0002', 'NVIDIATP002', 'READY', 'ada');
 INSERT INTO `detail_barang` VALUES (238, 'BRG0010', 'i9-01', 'PENDING', '-');
-INSERT INTO `detail_barang` VALUES (239, 'BRG0001', 'i9-001', 'DEFACED', '-');
+INSERT INTO `detail_barang` VALUES (239, 'BRG0001', 'i9-001', 'READY', '-');
+INSERT INTO `detail_barang` VALUES (240, 'BRG0001', 'i9-002', 'READY', '-');
+INSERT INTO `detail_barang` VALUES (241, 'BRG0001', 'asd', 'PENDING', 'asd');
 
 -- ----------------------------
 -- Table structure for kategori
@@ -280,9 +280,19 @@ CREATE TABLE `log_detail_barang`  (
   `NOMOR_SERI_DETAIL` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   `WAKTU` datetime(0) NOT NULL,
   `STATUS_LAMA` enum('READY','PENDING','DEFACED','RESERVED') CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `STATUS_BARU` enum('READY','PENDING','DEFACED','RESERVED') CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `STATUS_BARU` enum('READY','PENDING','DEFACED','RESERVED') CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`ID`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of log_detail_barang
+-- ----------------------------
+INSERT INTO `log_detail_barang` VALUES (1, 'BRG0001', 'i9-002', '2018-06-29 16:42:51', NULL, 'READY');
+INSERT INTO `log_detail_barang` VALUES (2, 'BRG0001', 'i9-001', '2018-06-29 16:43:17', 'DEFACED', 'READY');
+INSERT INTO `log_detail_barang` VALUES (3, 'BRG0001', 'asd', '2018-06-29 16:44:24', NULL, 'READY');
+INSERT INTO `log_detail_barang` VALUES (4, 'BRG0001', 'asd', '2018-06-29 16:44:28', NULL, 'READY');
+INSERT INTO `log_detail_barang` VALUES (5, 'BRG0001', 'asd', '2018-06-29 16:56:58', 'READY', 'PENDING');
+INSERT INTO `log_detail_barang` VALUES (6, 'BRG0001', 'asd', '2018-06-29 17:09:34', 'READY', NULL);
 
 -- ----------------------------
 -- Table structure for pengguna
@@ -344,9 +354,7 @@ INSERT INTO `spesifikasi` VALUES (20, 'BRG0020', 'Spesifikasi:\nMax CPU: 8th Gen
 INSERT INTO `spesifikasi` VALUES (21, 'BRG0021', 'Spesifikasi:\nPower: 450W\nInput: 100-240V\nFans: 1\nEfficiency: 92%');
 INSERT INTO `spesifikasi` VALUES (22, 'BRG0022', 'Spesifikasi:\nPower: 750W\nInput: 100-240V\nFans: 1\nEfficiency: 92%');
 INSERT INTO `spesifikasi` VALUES (23, 'BRG0023', 'Spesifikasi:\nPower: 750W\nInput: 100-240V\nFans: 1\nEfficiency: 92%');
-INSERT INTO `spesifikasi` VALUES (24, 'BRG0024', 'Spesifikasi:\nSize: 4TB\nMax Transfer: 600MB/s\nRotation: 5400RPM');
 INSERT INTO `spesifikasi` VALUES (25, 'BRG0025', 'Spesifikasi:\nSize: 1TB\nMax Transfer: 600MB/s\nRotation: 5400RPM');
-INSERT INTO `spesifikasi` VALUES (26, 'BRG0026', 'Spesifikasi:\nSize: 2TB\nMax Transfer: 600MB/s\nRotation: 5400RPM');
 
 -- ----------------------------
 -- Triggers structure for table detail_barang
