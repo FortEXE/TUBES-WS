@@ -40,7 +40,7 @@ namespace PARTS.Controllers
 
         // GET: api/Parts/GetLogBarang
         [HttpGet("GetLogBarang")]
-        public IActionResult GetBarang()
+        public IActionResult Getlog()
         {
             RepositoryLog RP = new RepositoryLog();
 

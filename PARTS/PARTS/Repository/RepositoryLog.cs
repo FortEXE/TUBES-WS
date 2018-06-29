@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using Dapper;
+using PARTS.Model;
 
 namespace PARTS.Controllers
 {
@@ -39,7 +40,7 @@ namespace PARTS.Controllers
             }
         }
 
-        public List<Barang> getAll()
+        public List<Log> getAll()
         {
             string query = "SELECT * FROM log_detail_barang;";
 
