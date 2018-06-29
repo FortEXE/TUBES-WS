@@ -483,6 +483,7 @@ namespace PARTS.Controllers
             }
         }
 
+        [HttpDelete("DeleteDetailBarangById/{id}")]
         public IActionResult DeleteDetailBarangById(int id)
         {
             RepositoryDetailBarang RP = new RepositoryDetailBarang();
