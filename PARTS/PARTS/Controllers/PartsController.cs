@@ -464,5 +464,20 @@ namespace PARTS.Controllers
                 return BadRequest();
             }
         }
+
+        public IActionResult DeleteDetailBarangById(int id)
+        {
+            RepositoryDetailBarang RP = new RepositoryDetailBarang();
+
+            try
+            {
+                RP.deleteById(id);
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
     }
 }

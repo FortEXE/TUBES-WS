@@ -104,12 +104,20 @@ namespace PARTS.Controllers
 
         public void deleteData(string Id)
         {
-            string query = "DELETE FROM detail_barang WHERE ID_DETAIL_BARANG = '" + Id + "';";
+            string query = "DELETE FROM detail_barang WHERE ID_BARANG = '" + Id + "';";
 
             OpenConnection();
             var hasil = myConn.Execute(query);
             closeConnection();
         }
 
+        public void deleteById(int Id)
+        {
+            string query = "DELETE FROM detail_barang WHERE ID_DETAIL_BARANG = '" + Id + "';";
+
+            OpenConnection();
+            var hasil = myConn.Execute(query);
+            closeConnection();
+        }
     }
 }
