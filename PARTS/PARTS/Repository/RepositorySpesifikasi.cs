@@ -90,7 +90,7 @@ namespace PARTS.Controllers
 
         public void deleteData(string Id)
         {
-            string query = "DELETE FROM spesifikasi WHERE XID_BARANG = " + Id + ";";
+            string query = "DELETE FROM spesifikasi WHERE XID_BARANG = '" + Id + "';";
 
             OpenConnection();
             var hasil = myConn.Execute(query);
