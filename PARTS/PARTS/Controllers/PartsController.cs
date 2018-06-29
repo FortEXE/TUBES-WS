@@ -205,6 +205,22 @@ namespace PARTS.Controllers
         //////////////////////////////  GET BY (OTHERS)  ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////
 
+        [HttpGet("SearchBarang/{search}", Name = "SearchBarang")]
+        public IActionResult SearchBarang(String search)
+        {
+            RepositoryBarang RP = new RepositoryBarang();
+
+            try
+            {
+                var hasil = RP.search(search);
+                return Ok(hasil);
+            }
+            catch (Exception)
+            {
+                return NotFound();
+            }
+        }
+
         [HttpGet("GetBarangByKategori/{idKategori}", Name = "GetBarangByKategori")]
         public IActionResult GetBarangByKategori(String idKategori)
         {
@@ -219,7 +235,6 @@ namespace PARTS.Controllers
             {
                 return NotFound();
             }
-
         }
 
         [HttpGet("GetBarangByMerk/{merk}", Name = "GetBarangByMerk")]

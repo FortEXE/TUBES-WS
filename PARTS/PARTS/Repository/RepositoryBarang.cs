@@ -83,6 +83,17 @@ namespace PARTS.Controllers
             return hasil;
         }
 
+        public List<Barang> search(String search)
+        {
+            string query = "SELECT * FROM barang where NAMA_BARANG LIKE '%" + search + "%';";
+
+            OpenConnection();
+            List<Barang> hasil = myConn.Query<Barang>(query).ToList();
+            closeConnection();
+
+            return hasil;
+        }
+
         public void insertData(Barang brg)
         {
             string _id_barang = brg.Id_barang;
