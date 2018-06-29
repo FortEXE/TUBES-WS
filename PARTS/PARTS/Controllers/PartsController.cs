@@ -38,6 +38,24 @@ namespace PARTS.Controllers
             
         }
 
+        // GET: api/Parts/GetLogBarang
+        [HttpGet("GetLogBarang")]
+        public IActionResult GetBarang()
+        {
+            RepositoryLog RP = new RepositoryLog();
+
+            try
+            {
+                List<Log> List = RP.getAll();
+                return Ok(List);
+            }
+            catch (Exception)
+            {
+                return NotFound();
+            }
+            
+        }
+
         // GET: api/Parts/GetAllSpesifikasi
         [HttpGet("GetAllSpesifikasi")]
         public IActionResult GetSpesifikasi()
